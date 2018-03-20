@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2014.4.1 (64-bit)
+# SW Build 1149489 on Thu Feb 19 16:23:09 MST 2015
+# IP Build 1147552 on Wed Feb 18 14:25:16 MST 2015
+# Start of session at: Thu Mar 19 09:17:56 2015
+# Process ID: 4692
+# Log file: C:/Users/jlawley/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/jlawley/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.xpr
+close_project
+open_project C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.xpr
+open_hw
+connect_hw_server
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+set_property PROGRAM.FILE {C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/impl_1/xilinx_pcie_2_1_ep_7x.bit} [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/impl_1/xilinx_pcie_2_1_ep_7x.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+archive_project C:/Work_projects/pcie_7x_0_example.xpr.zip -force -include_config_settings

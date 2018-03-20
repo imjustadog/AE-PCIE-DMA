@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="isim.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="board" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="group3" type="group">
+      <obj_property name="label">SYS Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/board/EP/sys_clk_c" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">sys_clk_c</obj_property>
+         <obj_property name="ObjectShortName">sys_clk_c</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/sys_reset_n_c" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">sys_reset_n_c</obj_property>
+         <obj_property name="ObjectShortName">sys_reset_n_c</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group6" type="group">
+      <obj_property name="label">TRN Common</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/board/EP/trn_clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_clk</obj_property>
+         <obj_property name="ObjectShortName">trn_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_reset_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_reset_n</obj_property>
+         <obj_property name="ObjectShortName">trn_reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_lnk_up_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_lnk_up_n</obj_property>
+         <obj_property name="ObjectShortName">trn_lnk_up_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_fc_sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_fc_sel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_fc_sel[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_fc_cpld" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_fc_cpld[11:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_fc_cpld[11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_fc_cplh" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_fc_cplh[7:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_fc_cplh[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_fc_npd" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_fc_npd[11:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_fc_npd[11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_fc_nph" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_fc_nph[7:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_fc_nph[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_fc_pd" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_fc_pd[11:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_fc_pd[11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_fc_ph" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_fc_ph[7:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_fc_ph[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group17" type="group">
+      <obj_property name="label">TRN Rx</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/board/EP/trn_rbar_hit_n" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rbar_hit_n[6:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_rbar_hit_n[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_rsrc_rdy_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rsrc_rdy_n</obj_property>
+         <obj_property name="ObjectShortName">trn_rsrc_rdy_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_rdst_rdy_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rdst_rdy_n</obj_property>
+         <obj_property name="ObjectShortName">trn_rdst_rdy_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_rsof_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rsof_n</obj_property>
+         <obj_property name="ObjectShortName">trn_rsof_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_reof_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_reof_n</obj_property>
+         <obj_property name="ObjectShortName">trn_reof_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_rd" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rd[31:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_rd[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_rerrfwd_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rerrfwd_n</obj_property>
+         <obj_property name="ObjectShortName">trn_rerrfwd_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_rsrc_dsc_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rsrc_dsc_n</obj_property>
+         <obj_property name="ObjectShortName">trn_rsrc_dsc_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_rnp_ok_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_rnp_ok_n</obj_property>
+         <obj_property name="ObjectShortName">trn_rnp_ok_n</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group27" type="group">
+      <obj_property name="label">TRN Tx</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/board/EP/trn_tsrc_rdy_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tsrc_rdy_n</obj_property>
+         <obj_property name="ObjectShortName">trn_tsrc_rdy_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_tdst_rdy_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tdst_rdy_n</obj_property>
+         <obj_property name="ObjectShortName">trn_tdst_rdy_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_tsof_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tsof_n</obj_property>
+         <obj_property name="ObjectShortName">trn_tsof_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_teof_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_teof_n</obj_property>
+         <obj_property name="ObjectShortName">trn_teof_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_td" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_td[31:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_td[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_tstr_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tstr_n</obj_property>
+         <obj_property name="ObjectShortName">trn_tstr_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_terrfwd_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_terrfwd_n</obj_property>
+         <obj_property name="ObjectShortName">trn_terrfwd_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_tsrc_dsc_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tsrc_dsc_n</obj_property>
+         <obj_property name="ObjectShortName">trn_tsrc_dsc_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_terr_drop_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_terr_drop_n</obj_property>
+         <obj_property name="ObjectShortName">trn_terr_drop_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_tbuf_av" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tbuf_av[5:0]</obj_property>
+         <obj_property name="ObjectShortName">trn_tbuf_av[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_tcfg_req_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tcfg_req_n</obj_property>
+         <obj_property name="ObjectShortName">trn_tcfg_req_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/board/EP/trn_tcfg_gnt_n" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">trn_tcfg_gnt_n</obj_property>
+         <obj_property name="ObjectShortName">trn_tcfg_gnt_n</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,10 @@
+# Microsoft Developer Studio Generated Dependency File, included by DriverMgr.mak
+
+.\DriverMgr.cpp : \
+	".\DriverMgr.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

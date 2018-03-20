@@ -1,0 +1,122 @@
+Release 13.4 ngdbuild O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc
+D:/GitHub/AE-PCIE-DMA/GVI_PCIe_x1_Gen1/s6_pcie_v1_4/example_design/xilinx_pcie_1
+_lane_ep_xc6slx45t-csg324-3.ucf -p xc6slx45t-csg324-3 xilinx_pcie_1_1_ep_s6.ngc
+xilinx_pcie_1_1_ep_s6.ngd
+
+Reading NGO file "D:/GitHub/AE-PCIE-DMA/BMD_design/xilinx_pcie_1_1_ep_s6.ngc"
+...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"D:/GitHub/AE-PCIE-DMA/GVI_PCIe_x1_Gen1/s6_pcie_v1_4/example_design/xilinx_pcie_
+1_lane_ep_xc6slx45t-csg324-3.ucf" ...
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[3].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[2].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[1].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_rx/brams[3].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_rx/brams[2].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_rx/brams[1].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   's6_pcie_v1_4_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/ramb16' of type
+   RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'GT_REFCLK_OUT', used in period specification
+   'TS_GT_REFCLK_OUT', was traced into BUFIO2 instance
+   s6_pcie_v1_4_i/gt_refclk_bufio2. The following new TNM groups and period
+   specifications were generated at the BUFIO2 output(s): 
+   DIVCLK: <TIMESPEC TS_s6_pcie_v1_4_i_gt_refclk_buf = PERIOD
+   "s6_pcie_v1_4_i_gt_refclk_buf" TS_GT_REFCLK_OUT HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 's6_pcie_v1_4_i_gt_refclk_buf', used in period
+   specification 'TS_s6_pcie_v1_4_i_gt_refclk_buf', was traced into PLL_ADV
+   instance PLL_ADV. The following new TNM groups and period specifications were
+   generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_s6_pcie_v1_4_i_clk_125 = PERIOD
+   "s6_pcie_v1_4_i_clk_125" TS_s6_pcie_v1_4_i_gt_refclk_buf / 1.25 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 's6_pcie_v1_4_i_gt_refclk_buf', used in period
+   specification 'TS_s6_pcie_v1_4_i_gt_refclk_buf', was traced into PLL_ADV
+   instance PLL_ADV. The following new TNM groups and period specifications were
+   generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_s6_pcie_v1_4_i_clk_250 = PERIOD
+   "s6_pcie_v1_4_i_clk_250" TS_s6_pcie_v1_4_i_gt_refclk_buf / 2.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 's6_pcie_v1_4_i_gt_refclk_buf', used in period
+   specification 'TS_s6_pcie_v1_4_i_gt_refclk_buf', was traced into PLL_ADV
+   instance PLL_ADV. The following new TNM groups and period specifications were
+   generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_s6_pcie_v1_4_i_clk_62_5 = PERIOD
+   "s6_pcie_v1_4_i_clk_62_5" TS_s6_pcie_v1_4_i_gt_refclk_buf / 0.625 HIGH 50%>
+
+INFO:ConstraintSystem - The Period constraint <NET sys_clk_c PERIOD = 10ns;>
+   [D:/GitHub/AE-PCIE-DMA/GVI_PCIe_x1_Gen1/s6_pcie_v1_4/example_design/xilinx_pc
+   ie_1_lane_ep_xc6slx45t-csg324-3.ucf(134)], is specified using the Net Period
+   method which is not recommended. Please use the Timespec PERIOD method.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   8
+
+Total memory usage is 175700 kilobytes
+
+Writing NGD file "xilinx_pcie_1_1_ep_s6.ngd" ...
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   5 sec
+
+Writing NGDBUILD log file "xilinx_pcie_1_1_ep_s6.bld"...

@@ -1,0 +1,28 @@
+/////////////////////////////////////////////////////////
+//     TOP LEVEL FPGA STRUCTURAL NETLIST               //
+/////////////////////////////////////////////////////////
+
+
+/// SOURCE:
+`include  "../../../example_design/xilinx_pci_exp_1_lane_epipe_endpoint_product.v"
+`include  "../../../simulation/xilinx_pci_exp_defines.v"
+`include  "../../../example_design/impl_test.v"
+`include  "../../../example_design/xilinx_pci_exp_1_lane_epipe_ep.v"
+`include  "../BMD/pipe_1_lane_pci_exp_32b_app.v"
+`include  "../BMD/common/BMD.v"
+`include  "../BMD/BMD_64_RX_ENGINE.v"
+`include  "../BMD/BMD_64_TX_ENGINE.v"
+`include  "../BMD/common/BMD_CFG_CTRL.v"
+`include  "../BMD/common/BMD_EP.v"
+`include  "../BMD/common/BMD_EP_MEM.v"
+`include  "../BMD/common/BMD_EP_MEM_ACCESS.v"
+`include  "../BMD/common/BMD_INTR_CTRL.v"
+`include  "../BMD/common/BMD_INTR_CTRL_DELAY.v"
+`include  "../BMD/common/BMD_RD_THROTTLE.v"
+`include  "../BMD/common/BMD_TO_CTRL.v"
+
+/////////////////////////////////////////////////////////
+//     PCI-EXPRESS CORE INSTANCE BLACKBOX              //
+/////////////////////////////////////////////////////////
+
+`include  "../../../example_design/pci_exp_1_lane_epipe_ep.v"

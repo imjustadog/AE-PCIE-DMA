@@ -1,0 +1,944 @@
+
+*** Running vivado
+    with args -log xilinx_pcie_2_1_ep_7x.vds -m64 -mode batch -messageDb vivado.pb -source xilinx_pcie_2_1_ep_7x.tcl
+
+
+****** Vivado v2014.4.1 (64-bit)
+  **** SW Build 1149489 on Thu Feb 19 16:23:09 MST 2015
+  **** IP Build 1147552 on Wed Feb 18 14:25:16 MST 2015
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source xilinx_pcie_2_1_ep_7x.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config -id {Synth 8-256} -limit 10000
+# set_msg_config -id {Synth 8-638} -limit 10000
+# create_project -in_memory -part xc7k325tffg900-2
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property webtalk.parent_dir c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.cache/wt [current_project]
+# set_property parent.project_path c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language Verilog [current_project]
+# set_property board_part xilinx.com:kc705:part0:1.1 [current_project]
+# read_ip c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.4/data/ip'.
+# set_property used_in_implementation false [get_files -all c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc]
+# set_property used_in_implementation false [get_files -all c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp]
+# set_property is_locked true [get_files c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci]
+# read_verilog -library xil_defaultlib {
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_GEN2.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_TX_ENGINE.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_RX_ENGINE.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_RD_THROTTLE.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM_ACCESS.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_CFG_CTRL.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_TO_CTRL.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_rx.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_tx.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_top.v
+#   C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/pcie_app_7x_bmd.v
+#   c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/xilinx_pcie_2_1_ep_7x.v
+# }
+# read_xdc c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/constrs_1/imports/example_design/xilinx_pcie_7x_ep_x8g2_KC705_REVC.xdc
+# set_property used_in_implementation false [get_files c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/constrs_1/imports/example_design/xilinx_pcie_7x_ep_x8g2_KC705_REVC.xdc]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# catch { write_hwdef -file xilinx_pcie_2_1_ep_7x.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top xilinx_pcie_2_1_ep_7x -part xc7k325tffg900-2
+Command: synth_design -top xilinx_pcie_2_1_ep_7x -part xc7k325tffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 258.910 ; gain = 93.992
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'xilinx_pcie_2_1_ep_7x' [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/xilinx_pcie_2_1_ep_7x.v:60]
+	Parameter PL_FAST_TRAIN bound to: FALSE - type: string 
+	Parameter EXT_PIPE_SIM bound to: FALSE - type: string 
+	Parameter PCIE_EXT_CLK bound to: FALSE - type: string 
+	Parameter PCIE_EXT_GT_COMMON bound to: FALSE - type: string 
+	Parameter REF_CLK_FREQ bound to: 0 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter KEEP_WIDTH bound to: 16 - type: integer 
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter USER_CLK_FREQ bound to: 4 - type: integer 
+	Parameter USER_CLK2_DIV2 bound to: TRUE - type: string 
+	Parameter USERCLK2_FREQ bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:10250]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:10250]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE2' [C:/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:10380]
+	Parameter CLKCM_CFG bound to: TRUE - type: string 
+	Parameter CLKRCV_TRST bound to: TRUE - type: string 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE2' (2#1) [C:/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:10380]
+INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:17301]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'OBUF' (3#1) [C:/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:17301]
+INFO: [Synth 8-638] synthesizing module 'pcie_7x_0' [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/synth_1/.Xil/Vivado-15060-XCOJLAWLEY32/realtime/pcie_7x_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'pcie_7x_0' (4#1) [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/synth_1/.Xil/Vivado-15060-XCOJLAWLEY32/realtime/pcie_7x_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'pcie_app_7x' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/pcie_app_7x_bmd.v:32]
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter KEEP_WIDTH bound to: 16 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BMD' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD.v:29]
+	Parameter NUM_GP_PORTS bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BMD_EP' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP.v:28]
+	Parameter NUM_GP_PORTS bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BMD_EP_MEM_ACCESS' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM_ACCESS.v:40]
+	Parameter NUM_GP_PORTS bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BMD_EP_MEM' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM.v:27]
+	Parameter NUM_GP_PORTS bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'BMD_EP_MEM' (5#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM.v:27]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM_ACCESS.v:306]
+INFO: [Synth 8-256] done synthesizing module 'BMD_EP_MEM_ACCESS' (6#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM_ACCESS.v:40]
+INFO: [Synth 8-638] synthesizing module 'BMD_GEN2' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_GEN2.v:38]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_GEN2.v:121]
+INFO: [Synth 8-256] done synthesizing module 'BMD_GEN2' (7#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_GEN2.v:38]
+INFO: [Synth 8-638] synthesizing module 'BMD_128_RX_ENGINE' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_RX_ENGINE.v:41]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_RX_ENGINE.v:1294]
+INFO: [Synth 8-256] done synthesizing module 'BMD_128_RX_ENGINE' (8#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_RX_ENGINE.v:41]
+INFO: [Synth 8-638] synthesizing module 'BMD_128_TX_ENGINE' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_TX_ENGINE.v:44]
+INFO: [Synth 8-638] synthesizing module 'BMD_INTR_CTRL' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:42]
+	Parameter Tcq bound to: 1 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:106]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:106]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:178]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:178]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:255]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:255]
+INFO: [Synth 8-256] done synthesizing module 'BMD_INTR_CTRL' (9#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v:42]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_TX_ENGINE.v:476]
+INFO: [Synth 8-256] done synthesizing module 'BMD_128_TX_ENGINE' (10#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_TX_ENGINE.v:44]
+INFO: [Synth 8-638] synthesizing module 'BMD_RD_THROTTLE' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_RD_THROTTLE.v:29]
+	Parameter Tcq bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'BMD_RD_THROTTLE' (11#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_RD_THROTTLE.v:29]
+INFO: [Synth 8-256] done synthesizing module 'BMD_EP' (12#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP.v:28]
+INFO: [Synth 8-638] synthesizing module 'BMD_TO_CTRL' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_TO_CTRL.v:27]
+INFO: [Synth 8-256] done synthesizing module 'BMD_TO_CTRL' (13#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_TO_CTRL.v:27]
+INFO: [Synth 8-638] synthesizing module 'BMD_CFG_CTRL' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_CFG_CTRL.v:43]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_CFG_CTRL.v:96]
+INFO: [Synth 8-256] done synthesizing module 'BMD_CFG_CTRL' (14#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_CFG_CTRL.v:43]
+INFO: [Synth 8-256] done synthesizing module 'BMD' (15#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD.v:29]
+INFO: [Synth 8-638] synthesizing module 'axi_trn_top' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_top.v:69]
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_FAMILY bound to: X7 - type: string 
+	Parameter C_ROOT_PORT bound to: FALSE - type: string 
+	Parameter C_PM_PRIORITY bound to: FALSE - type: string 
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+	Parameter RBAR_WIDTH bound to: 8 - type: integer 
+	Parameter KEEP_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_trn_rx' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_rx.v:71]
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_FAMILY bound to: X7 - type: string 
+	Parameter C_ROOT_PORT bound to: FALSE - type: string 
+	Parameter C_PM_PRIORITY bound to: FALSE - type: string 
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+	Parameter RBAR_WIDTH bound to: 8 - type: integer 
+	Parameter KEEP_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axi_trn_rx' (16#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_rx.v:71]
+INFO: [Synth 8-638] synthesizing module 'axi_trn_tx' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_tx.v:70]
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_FAMILY bound to: X7 - type: string 
+	Parameter C_ROOT_PORT bound to: FALSE - type: string 
+	Parameter C_PM_PRIORITY bound to: FALSE - type: string 
+	Parameter TCQ bound to: 1 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+	Parameter KEEP_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axi_trn_tx' (17#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_tx.v:70]
+INFO: [Synth 8-256] done synthesizing module 'axi_trn_top' (18#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_top.v:69]
+INFO: [Synth 8-256] done synthesizing module 'pcie_app_7x' (19#1) [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/pcie_app_7x_bmd.v:32]
+INFO: [Synth 8-256] done synthesizing module 'xilinx_pcie_2_1_ep_7x' (20#1) [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/xilinx_pcie_2_1_ep_7x.v:60]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 319.113 ; gain = 154.195
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 319.113 ; gain = 154.195
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/Vivado/2014.4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.4/data/parts/xilinx/kintex7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.4/data\parts/xilinx/kintex7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ffg900/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.4/data\./parts/xilinx/kintex7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.4/data\parts/xilinx/kintex7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/synth_1/.Xil/Vivado-15060-XCOJLAWLEY32/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_7x_0_i'
+Finished Parsing XDC File [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/synth_1/.Xil/Vivado-15060-XCOJLAWLEY32/dcp/pcie_7x_0_in_context.xdc] for cell 'pcie_7x_0_i'
+Parsing XDC File [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/constrs_1/imports/example_design/xilinx_pcie_7x_ep_x8g2_KC705_REVC.xdc]
+Finished Parsing XDC File [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/constrs_1/imports/example_design/xilinx_pcie_7x_ep_x8g2_KC705_REVC.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/constrs_1/imports/example_design/xilinx_pcie_7x_ep_x8g2_KC705_REVC.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xilinx_pcie_2_1_ep_7x_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/xilinx_pcie_2_1_ep_7x_propImpl.xdc] to anoth XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 688.848 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for pcie_7x_0_i. (constraint file  c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/synth_1/dont_touch.xdc, line 7).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+ROM "pl_directed_link_speed" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "clr_pl_width_change_err" won't be mapped to RAM because it is too sparse.
+ROM "pre_wr_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "mem_write_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "mem_wr_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "pl_sel_link_width_save" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "pl_width_change_err" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "bmd_gen2_fsm" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "bmd_gen2_fsm" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "poll_cntr_15_80" won't be mapped to RAM because it is too sparse.
+ROM "clear_directed_WSC" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "prev_bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "req_compl_o" won't be mapped to RAM because it is too sparse.
+ROM "req_tc_o" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state_q" won't be mapped to RAM because it is too sparse.
+ROM "trn_reof_n_q" won't be mapped to RAM because it is too sparse.
+ROM "trn_rsof_n_q" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'rd_intr_state_reg' in module 'BMD_INTR_CTRL'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'wr_intr_state_reg' in module 'BMD_INTR_CTRL'
+ROM "trn_teof_n" won't be mapped to RAM because it is too sparse.
+ROM "trn_trem_n" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_tx_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+INFO: [Synth 8-802] inferred FSM for state register 'bmd_128_tx_state_reg' in module 'BMD_128_TX_ENGINE'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cfg_intf_state_reg' in module 'BMD_CFG_CTRL'
+ROM "cfg_intf_state" won't be mapped to RAM because it is too sparse.
+ROM "cfg_bme_state" won't be mapped to RAM because it is too sparse.
+ROM "tkeep2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 5     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 38    
+	               21 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 18    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 66    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 13    
+	   3 Input    128 Bit        Muxes := 1     
+	   4 Input    128 Bit        Muxes := 1     
+	   6 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 46    
+	   5 Input     32 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 2     
+	   6 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 15    
+	   4 Input     16 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 2     
+	   5 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 14    
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 6     
+	   5 Input     10 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 2     
+	  42 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 61    
+	   3 Input      8 Bit        Muxes := 4     
+	   5 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 2     
+	   5 Input      7 Bit        Muxes := 9     
+	   2 Input      7 Bit        Muxes := 26    
+	   3 Input      7 Bit        Muxes := 3     
+	   4 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 8     
+	   2 Input      5 Bit        Muxes := 7     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 16    
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 24    
+	   3 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 3     
+	  11 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 23    
+	  42 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	  42 Input      1 Bit        Muxes := 42    
+	   2 Input      1 Bit        Muxes := 290   
+	   4 Input      1 Bit        Muxes := 24    
+	   3 Input      1 Bit        Muxes := 12    
+	   9 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 16    
+	   6 Input      1 Bit        Muxes := 27    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xilinx_pcie_2_1_ep_7x 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module BMD_EP_MEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 30    
+	               21 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  42 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	  42 Input      2 Bit        Muxes := 1     
+	  42 Input      1 Bit        Muxes := 42    
+	   2 Input      1 Bit        Muxes := 43    
+Module BMD_EP_MEM_ACCESS 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+Module BMD_GEN2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 19    
+Module BMD_128_RX_ENGINE 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 4     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 5     
+	   3 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 32    
+	   5 Input     32 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+	   5 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 13    
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 40    
+	   3 Input      8 Bit        Muxes := 4     
+	   5 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   5 Input      7 Bit        Muxes := 8     
+	   2 Input      7 Bit        Muxes := 26    
+	   3 Input      7 Bit        Muxes := 3     
+	   4 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 5     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 155   
+	   3 Input      1 Bit        Muxes := 12    
+	   9 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 5     
+Module BMD_INTR_CTRL 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 6     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 4     
+Module BMD_128_TX_ENGINE 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 4     
+	               13 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 8     
+	   4 Input    128 Bit        Muxes := 1     
+	   6 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 9     
+	   6 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 10    
+	   4 Input     16 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 4     
+	   5 Input     10 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 11    
+	   6 Input      8 Bit        Muxes := 2     
+	   5 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 3     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 8     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   3 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 57    
+	   5 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 22    
+Module BMD_RD_THROTTLE 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+Module BMD_EP 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
+Module BMD_TO_CTRL 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module BMD_CFG_CTRL 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 1     
+Module BMD 
+Detailed RTL Component Info : 
+Module axi_trn_rx 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module axi_trn_tx 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module axi_trn_top 
+Detailed RTL Component Info : 
+Module pcie_app_7x 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'EP_MEM/mrd_count_o_reg[31:0]' into 'EP_MEM/mrd_count_o_reg[31:0]' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM.v:399]
+INFO: [Synth 8-4471] merging register 'EP_MEM/mrd_len_o_reg[31:0]' into 'EP_MEM/mrd_len_o_reg[31:0]' [C:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM.v:398]
+DSP Report: Generating DSP EP_MEM/expect_cpld_data_size_reg, operation Mode is: (A''*B'')'.
+DSP Report: register mem_wr_data_reg is absorbed into DSP EP_MEM/expect_cpld_data_size_reg.
+DSP Report: register EP_MEM/mrd_count_o_reg is absorbed into DSP EP_MEM/expect_cpld_data_size_reg.
+DSP Report: register A is absorbed into DSP EP_MEM/expect_cpld_data_size_reg.
+DSP Report: register EP_MEM/mrd_len_o_reg is absorbed into DSP EP_MEM/expect_cpld_data_size_reg.
+DSP Report: register EP_MEM/expect_cpld_data_size_reg is absorbed into DSP EP_MEM/expect_cpld_data_size_reg.
+DSP Report: operator EP_MEM/expect_cpld_data_size0 is absorbed into DSP EP_MEM/expect_cpld_data_size_reg.
+ROM "poll_cntr_15_80" won't be mapped to RAM because it is too sparse.
+ROM "req_compl_o" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "prev_bmd_128_rx_state" won't be mapped to RAM because it is too sparse.
+ROM "req_tc_o" won't be mapped to RAM because it is too sparse.
+ROM "trn_rsof_n_q" won't be mapped to RAM because it is too sparse.
+ROM "bmd_128_rx_state_q" won't be mapped to RAM because it is too sparse.
+ROM "trn_teof_n" won't be mapped to RAM because it is too sparse.
+ROM "trn_trem_n" won't be mapped to RAM because it is too sparse.
+ROM "app/axi_trn_top/tx_inst/tkeep2" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 688.848 ; gain = 523.930
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+ Sort Area is null EP_MEM/expect_cpld_data_size_reg_0 : 0 0 : 2095 2095 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|BMD_EP_MEM_ACCESS | (A''*B'')'  | No           | 16     | 16     | 48     | 25     | 21     | 2    | 2    | 1    | 1    | 1     | 1    | 0    | 
++------------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows DSPs generated at current stage. Some DSP generation could be reversed due to later optimizations. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app/BMD/BMD_EP/EP_RX /\bmd_128_rx_state_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app/BMD/BMD_EP/EP_RX /\strad_bmd_128_rx_state_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app/BMD/BMD_EP/EP_MEM/wr_mem_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app/BMD/BMD_EP/EP_RX /\prev_bmd_128_rx_state_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app/BMD/BMD_EP/EP_TX/mwr_len_byte_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\app/BMD/BMD_CF/cfg_dwaddr_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\app/BMD/BMD_EP/EP_TX/trn_tsrc_dsc_n_reg )
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/wr_mem_state_reg[3] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/wr_mem_state_reg[0] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[31] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[30] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[29] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[28] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[27] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[26] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[25] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[24] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[23] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[22] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[21] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[20] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[19] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[18] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[17] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_len_o_reg[16] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[31] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[30] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[29] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[28] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[27] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[26] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[25] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[24] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[23] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[22] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[21] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[20] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[19] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[18] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[17] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_reg[16] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[31] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[30] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[29] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[28] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[27] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[26] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[25] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[24] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[23] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[22] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[21] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[20] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[19] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[18] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[17] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len_o_reg[16] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[31] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[30] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[29] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[28] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[27] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[26] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[25] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[24] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[23] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[22] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[21] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[20] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[19] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[18] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[17] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[16] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[15] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[14] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[13] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[12] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[11] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[10] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[9] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[8] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[7] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[6] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[5] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[4] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[3] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[2] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[1] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn0_reg[0] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[31] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[30] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[29] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[28] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[27] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[26] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[25] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[24] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[23] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[22] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[21] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[20] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[19] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[18] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[17] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[16] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[15] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Synth 8-3332] Sequential element (\app/BMD/BMD_EP/EP_MEM/EP_MEM/gp_data_dn1_reg[14] ) is unused and will be removed from module xilinx_pcie_2_1_ep_7x.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 688.848 ; gain = 523.930
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 688.848 ; gain = 523.930
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 705.129 ; gain = 540.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 708.043 ; gain = 543.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 752.633 ; gain = 587.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop app/BMD/BMD_TO/cfg_turnoff_ok_n_reg is being inverted and renamed to app/BMD/BMD_TO/cfg_turnoff_ok_n_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 752.633 ; gain = 587.715
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 752.633 ; gain = 587.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 752.633 ; gain = 587.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |pcie_7x_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |pcie_7x_0   |     1|
+|2     |CARRY4      |   129|
+|3     |DSP48E1     |     1|
+|4     |IBUFDS_GTE2 |     1|
+|5     |LUT1        |   250|
+|6     |LUT2        |   151|
+|7     |LUT3        |   138|
+|8     |LUT4        |   268|
+|9     |LUT5        |   392|
+|10    |LUT6        |  1091|
+|11    |MUXF7       |    36|
+|12    |MUXF8       |     6|
+|13    |FDRE        |  1232|
+|14    |FDSE        |    23|
+|15    |IBUF        |    19|
+|16    |OBUF        |    20|
++------+------------+------+
+
+Report Instance Areas: 
++------+------------------------+------------------+------+
+|      |Instance                |Module            |Cells |
++------+------------------------+------------------+------+
+|1     |top                     |                  |  4279|
+|2     |  app                   |pcie_app_7x       |  3655|
+|3     |    BMD                 |BMD               |  3655|
+|4     |      BMD_CF            |BMD_CFG_CTRL      |    44|
+|5     |      BMD_EP            |BMD_EP            |  3608|
+|6     |        BMD_GEN2_I      |BMD_GEN2          |    83|
+|7     |        EP_MEM          |BMD_EP_MEM_ACCESS |   873|
+|8     |          EP_MEM        |BMD_EP_MEM        |   771|
+|9     |        EP_RX           |BMD_128_RX_ENGINE |  1493|
+|10    |        EP_TX           |BMD_128_TX_ENGINE |  1139|
+|11    |          BMD_INTR_CTRL |BMD_INTR_CTRL     |    44|
+|12    |      BMD_TO            |BMD_TO_CTRL       |     3|
++------+------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 752.633 ; gain = 587.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:47 . Memory (MB): peak = 752.633 ; gain = 167.996
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 752.633 ; gain = 587.715
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 149 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+181 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 752.633 ; gain = 547.508
+# write_checkpoint -noxdef xilinx_pcie_2_1_ep_7x.dcp
+# catch { report_utilization -file xilinx_pcie_2_1_ep_7x_utilization_synth.rpt -pb xilinx_pcie_2_1_ep_7x_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 752.633 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 14:34:04 2015...

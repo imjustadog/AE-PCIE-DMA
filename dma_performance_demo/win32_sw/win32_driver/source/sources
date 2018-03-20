@@ -1,0 +1,14 @@
+TARGETNAME=pcie_demo
+TARGETTYPE=DRIVER
+
+TARGETPATH=obj
+
+INCLUDES=$(BASEDIR)\inc
+
+C_DEFINES=-DRIVER
+NTTARGETFILE0=msglog.h
+
+SOURCES=		\
+	s3_1000.c 	\
+	pnp.c 		\
+	s3_1000.rc

@@ -1,0 +1,156 @@
+###############################################################################
+#
+# File:   xilinx_pci_exp_blk_plus_8_lane_ep-XC5VLX50T-FF1136-1_ml555.ucf
+#
+# Use this file only with the device listed below.  Any other
+# combination is invalid.  Do not modify this file except in
+# regions designated for "User" constraints.
+#
+# Copyright (c) 2007 Xilinx, Inc.  All rights reserved.
+#
+###############################################################################
+
+###############################################################################
+# Define Device, Package And Speed Grade
+###############################################################################
+
+CONFIG PART = XC5VLX50T-FF1136-1 ;
+
+###############################################################################
+# User Time Names / User Time Groups / Time Specs
+###############################################################################
+
+TIMEGRP "ANY" = FFS (*) ;
+
+TIMEGRP "RMWRCNT" = FFS (app/BMD/BMD_EP/EP_TX/rmwr_count*);
+TIMEGRP "CURWRCNT" = FFS (app/BMD/BMD_EP/EP_TX/cur_wr_count*);
+TIMESPEC "TS_RMWRCNT_TO_CURWRCNT" = FROM "RMWRCNT" TO "CURWRCNT" 8.0 ns ;
+TIMEGRP "MWRDUN" = FFS (app/BMD/BMD_EP/EP_TX/mwr_done*);
+
+#TIMEGRP "CURRDCNT" = FFS (*/cur_mrd_count*) ; 
+INST "app/BMD/BMD_EP/EP_TX/rmwr_count*" TNM = FFS "MWRCNT"; 
+INST "app/BMD/BMD_EP/EP_TX/trn_td*" TNM = FFS "TRNTD"; 
+
+TIMESPEC "TS_MWRCNT_TO_TRNTD" = FROM "MWRCNT" TO "TRNTD" 8.0 ns ;
+TIMESPEC "TS_CURWRCNT_TO_TRNTD" = FROM "CURWRCNT" TO "TRNTD" 8.0 ns ;
+#TIMESPEC "TS_CURRDCNT_TO_TRNTD" = FROM "CURRDCNT" TO "TRNTD" 8.0 ns ;
+TIMESPEC "TS_MWRCNT_TO_MWRDUN" = FROM "MWRCNT" TO "MWRDUN" 8.0 ns ;
+
+TIMEGRP "RMRDCNT" = FFS (app/BMD/BMD_EP/EP_TX/rmrd_count*) ;
+TIMEGRP "MRDDUN" = FFS (app/BMD/BMD_EP/EP_TX/mrd_done) ;
+TIMESPEC "TS_RMRDCNT_TO_MRDDUN" = FROM "RMRDCNT" TO "MRDDUN" 8.0 ns ;
+
+TIMEGRP "CWRCNT" = FFS (app/BMD/BMD_EP/EP_TX/cur_wr_count*) ;
+TIMEGRP "PWRADDR" = FFS (app/BMD/BMD_EP/EP_TX/pmwr_addr*) ;
+TIMESPEC "TS_CWRCNT_TO_PWRADDR" = FROM "CWRCNT" TO "PWRADDR" 8.0 ns ;
+
+TIMEGRP "MRDLEN" = FFS (app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_len*) ;
+TIMEGRP "MRDCNT" = FFS (app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_count*) ;
+#TIMEGRP "EXPSIZE" = FFS (app/BMD/BMD_EP/EP_MEM/EP_MEM/expect_cpld_data_size*) ;
+
+#TIMESPEC "TS_MRDLEN_TO_EXPSIZE" = FROM "MRDLEN" TO "EXPSIZE" 8.0 ns ;
+#TIMESPEC "TS_MRDCNT_TO_EXPSIZE" = FROM "MRDCNT" TO "EXPSIZE" 8.0 ns ;
+
+#UNUSED
+#TIMEGRP "CWRCTR" = FFS (app/BMD/BMD_EP/EP_TX/cur_wr_count*) ;
+#TIMEGRP "WRLENBYTE" = FFS (app/BMD/BMD_EP/EP_TX/mwr_len_byte*);  not used
+
+#TIMEGRP "RDLENBYTE" = FFS (app/BMD/BMD_EP/EP_TX/mrd_len_byte*) ;
+
+#INST "app/BMD/BMD_EP/EP_TX/cur_rd_count*" TNM = FFS "CRDCNT"; 
+
+#TIMEGRP "PRDADDR" = FFS (app/BMD/BMD_EP/EP_TX/pmrd_addr*) ;
+
+#INST "app/BMD/BMD_EP/EP_TX/rmwr_count*" TNM = FFS "CURWRCNT"; 
+
+
+
+###############################################################################
+# User Physical Constraints
+###############################################################################
+
+###############################################################################
+# Pinout and Related I/O Constraints
+###############################################################################
+
+#
+# SYS reset (input) signal.  The sys_reset_n signal should be
+# obtained from the PCI Express interface if possible.  For
+# slot based form factors, a system reset signal is usually
+# present on the connector.  For cable based form factors, a
+# system reset signal may not be available.  In this case, the
+# system reset signal must be generated locally by some form of
+# supervisory circuit.  You may change the IOSTANDARD and LOC
+# to suit your requirements and VCCO voltage banking rules.
+#
+
+NET "sys_reset_n"      LOC = "AE14"  | IOSTANDARD = LVCMOS25 | PULLUP | NODELAY ;
+
+#
+# SYS clock 250 MHz (input) signal.  The sys_clk_p and sys_clk_n
+# signals are the PCI Express reference clock. Virtex-5 GTP
+# Transceiver architecture requires the use of a dedicated clock
+# resources (FPGA input pins) associated with each GTP Transceiver Tile.
+# To use these pins an IBUFDS primitive (refclk_ibuf) is
+# instantiated in user's design.
+# Please refer to the Virtex-5 GTP Transceiver User Guide 
+# (UG196) for guidelines regarding clock resource selection.
+#
+
+NET  "sys_clk_p"       LOC = "Y4"  ;
+NET  "sys_clk_n"       LOC = "Y3"  ;
+INST "refclk_ibuf"     DIFF_TERM = "TRUE" ;
+
+#
+# Transceiver instance placement.  This constraint selects the
+# transceivers to be used, which also dictates the pinout for the
+# transmit and receive differential pairs.  Please refer to the
+# Virtex-5 GTP Transceiver User Guide (UG196) for more
+# information.
+#
+
+# PCIe Lanes 0, 1
+INST "ep/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/GTD[0].GT_i" LOC = GTP_DUAL_X0Y2;
+
+# PCIe Lanes 2, 3
+INST "ep/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/GTD[2].GT_i" LOC = GTP_DUAL_X0Y1;
+
+# PCIe Lanes 4, 5
+INST "ep/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/GTD[4].GT_i" LOC = GTP_DUAL_X0Y3;
+
+# PCIe Lanes 6, 7
+INST "ep/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/GTD[6].GT_i" LOC = GTP_DUAL_X0Y0;
+
+###############################################################################
+# Physical Constraints
+###############################################################################
+
+#
+# BlockRAM placement
+#
+
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[1].ram_tdp2_inst" LOC = RAMB36_X1Y9 ;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[1].ram_tdp2_inst" LOC = RAMB36_X1Y8 ;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[0].ram_tdp2_inst" LOC = RAMB36_X1Y7 ;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[0].ram_tdp2_inst" LOC = RAMB36_X1Y6 ;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_retry/generate_sdp.ram_sdp_inst"      LOC = RAMB36_X1Y5 ;
+
+
+###############################################################################
+# Timing Constraints
+###############################################################################
+
+#
+# Timing requirements and related constraints.
+#
+
+NET "sys_clk_c"                                      PERIOD = 10ns;
+
+NET "ep/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/gt_refclk_out[0]" TNM_NET = "MGTCLK" ;
+
+
+TIMESPEC "TS_MGTCLK"  = PERIOD "MGTCLK" 100.00 MHz HIGH 50 % ;
+
+###############################################################################
+# End
+###############################################################################

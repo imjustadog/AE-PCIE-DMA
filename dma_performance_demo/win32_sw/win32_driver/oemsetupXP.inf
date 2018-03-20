@@ -1,0 +1,50 @@
+; pcie_demo.inf - free version
+;
+
+[Version]
+Signature="$Chicago$"
+Class=Unknown
+Provider=%AVNET%
+DriverVer=2.0.0.2
+
+[Manufacturer]
+%AVNET% = AVNET.Board
+
+[AVNET.Board]
+%Driver%=AVNET.Install, PCI\VEN_10EE&DEV_0007
+
+[DestinationDirs]
+AVNET.Files.Driver=10,System32\Drivers
+
+[SourceDisksNames]
+1="PCIe Performance Demo Driver Disk",,,
+
+[SourceDisksFiles]
+pcie_demo.sys=1,
+
+; Windows XP install
+;
+
+[AVNET.Install]
+CopyFiles=AVNET.Files.Driver
+AddReg=AVNET.AddReg
+
+[AVNET.Files.Driver]
+pcie_demo.sys
+
+[AVNET.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,pcie_demo.sys
+
+[AVNET.Install.Services]
+AddService=pcie_demo,2,AVNET.Launch
+
+[AVNET.Launch]
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%11%\drivers\pcie_demo.sys
+
+[Strings]
+MDS="Avnet Inc."
+Driver="PCIe Bus Master DMA Demo Driver for Windows XP, Ver 2.0.0.2"

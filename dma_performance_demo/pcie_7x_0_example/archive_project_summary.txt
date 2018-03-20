@@ -1,0 +1,210 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following four sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+* Section (5) - CONFIGURATION SETTINGS/FILES
+*  This section summarizes the configuration settings/files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = pcie_7x_0_example
+Directory = C:/Work_projects/pcie_7x_0_example
+
+Section (2) - INCLUDED RUNS
+---------------------------
+The run results were included for the following runs in the archived project:-
+
+<synth_1>
+<impl_1>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<sources_1>
+None
+
+<constrs_1>
+None
+
+<sim_1>
+None
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_INTR_CTRL.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_GEN2.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_TX_ENGINE.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_128_RX_ENGINE.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_RD_THROTTLE.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP_MEM_ACCESS.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_CFG_CTRL.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_TO_CTRL.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_rx.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_tx.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD_EP.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/BMD.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/axi_trn_top.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/doc/pcie_7x_v3_0_changelog.txt
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.veo
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_clock.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_eq.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_drp.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_rate.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_reset.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_sync.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_pipe_rate.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_pipe_drp.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_pipe_reset.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_user.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pipe_wrapper.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_drp.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_reset.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_qpll_wrapper.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_rxeq_scan.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_top.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_core_top.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_null_gen.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx_pipeline.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_rx.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_top.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_pipeline.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx_thrtl_ctl.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_axi_basic_tx.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_7x.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_7x.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_bram_top_7x.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_brams_7x.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_lane.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_misc.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie_pipe_pipeline.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_top.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_common.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtp_cpllpd_ovrd.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gtx_cpllpd_ovrd.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_rx_valid_filter_7x.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_gt_wrapper.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0_pcie2_top.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/sim/pcie_7x_0.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_stub.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_stub.vhdl
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_funcsim.v
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_funcsim.vhdl
+./pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xml
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/bmd/pcie_app_7x_bmd.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/xilinx_pcie_2_1_ep_7x.v
+./pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/hierarchy.txt
+
+<constrs_1>
+./pcie_7x_0_example.srcs/constrs_1/imports/example_design/xilinx_pcie_7x_ep_x8g2_KC705_REVC.xdc
+
+<sim_1>
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/source/pcie_7x_0_gt_top_pipe_mode.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/functional/board_common.vh
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pci_exp_usrapp_cfg.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pci_exp_expect_tasks.vh
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pci_exp_usrapp_com.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pci_exp_usrapp_pl.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pci_exp_usrapp_rx.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/tests/tests.vh
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/tests/sample_tests1.vh
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pci_exp_usrapp_tx.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/functional/sys_clk_gen.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pcie_axi_trn_bridge.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/pcie_2_1_rport_7x.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/functional/sys_clk_gen_ds.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/dsport/xilinx_pcie_2_1_rport_7x.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/functional/pipe_interconnect.v
+./pcie_7x_0_example.srcs/sim_1/imports/pcie_7x_0/simulation/functional/board.v
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+None
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = C:/Users/jlawley/AppData/Roaming/Xilinx/Vivado/vivado.jou
+Archived Location = ./pcie_7x_0_example/vivado.jou
+
+Source File = C:/Users/jlawley/AppData/Roaming/Xilinx/Vivado/vivado.log
+Archived Location = ./pcie_7x_0_example/vivado.log
+
+Section (5) - CONFIGURATION SETTINGS/FILES
+------------------------------------------
+List of configuration settings/files that were added to the archived project:-
+
+

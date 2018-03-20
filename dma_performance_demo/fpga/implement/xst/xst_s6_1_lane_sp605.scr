@@ -1,0 +1,9 @@
+run
+-ifn ./xst/xilinx_pci_exp_s6_1_lane_ep_inc.xst
+-ifmt Verilog
+-p xc6slx45t-fgg484-2
+-bufg 0
+-top xilinx_pcie_1_1_ep_s6
+-ofn xilinx_pci_exp_ep.ngc
+-ofmt NGC
+

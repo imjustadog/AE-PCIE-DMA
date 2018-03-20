@@ -1,0 +1,913 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml xilinx_pcie_1_1_ep_s6.twx xilinx_pcie_1_1_ep_s6.ncd -o
+xilinx_pcie_1_1_ep_s6.twr xilinx_pcie_1_1_ep_s6.pcf
+
+Design file:              xilinx_pcie_1_1_ep_s6.ncd
+Physical constraint file: xilinx_pcie_1_1_ep_s6.pcf
+Device,package,speed:     xc6slx45t,csg324,C,-3 (PRODUCTION 1.21 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "sys_clk_c" PERIOD = 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.125ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "sys_clk_c" PERIOD = 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.875ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.125ns (320.000MHz) (Tgtpcper_CLK)
+  Physical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/CLK00
+  Logical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/CLK00
+  Location pin: GTPA1_DUAL_X0Y0.CLK00
+  Clock network: sys_clk_c
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_GT_REFCLK_OUT = PERIOD TIMEGRP "GT_REFCLK_OUT" 10 ns HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   0.925ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_GT_REFCLK_OUT = PERIOD TIMEGRP "GT_REFCLK_OUT" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 9.075ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 0.925ns (1081.081MHz) (Tbufper_I)
+  Physical resource: s6_pcie_v1_4_i/gt_refclk_bufio2/I
+  Logical resource: s6_pcie_v1_4_i/gt_refclk_bufio2/I
+  Location pin: BUFIO2_X2Y28.I
+  Clock network: s6_pcie_v1_4_i/gt_refclk_out<0>
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_s6_pcie_v1_4_i_gt_refclk_buf = PERIOD TIMEGRP         
+"s6_pcie_v1_4_i_gt_refclk_buf" TS_GT_REFCLK_OUT HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.334ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_s6_pcie_v1_4_i_gt_refclk_buf = PERIOD TIMEGRP
+        "s6_pcie_v1_4_i_gt_refclk_buf" TS_GT_REFCLK_OUT HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 3.075ns (period - min period limit)
+  Period: 4.000ns
+  Min period limit: 0.925ns (1081.081MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: s6_pcie_v1_4_i/pll_base_i/PLL_ADV/CLKOUT0
+  Logical resource: s6_pcie_v1_4_i/pll_base_i/PLL_ADV/CLKOUT0
+  Location pin: PLL_ADV_X0Y2.CLKOUT0
+  Clock network: s6_pcie_v1_4_i/clk_250
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: s6_pcie_v1_4_i/pll_base_i/PLL_ADV/CLKIN1
+  Logical resource: s6_pcie_v1_4_i/pll_base_i/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: s6_pcie_v1_4_i/gt_refclk_buf
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: s6_pcie_v1_4_i/pll_base_i/PLL_ADV/CLKIN1
+  Logical resource: s6_pcie_v1_4_i/pll_base_i/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y2.CLKIN1
+  Clock network: s6_pcie_v1_4_i/gt_refclk_buf
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_s6_pcie_v1_4_i_clk_125 = PERIOD TIMEGRP 
+"s6_pcie_v1_4_i_clk_125"         TS_s6_pcie_v1_4_i_gt_refclk_buf / 1.25 HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 45 paths analyzed, 45 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.000ns.
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.PIPERXDATAA3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     4.121ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i (HSIO)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          8.000ns
+  Data Path Delay:      3.679ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.107ns (0.464 - 0.571)
+  Source Clock:         s6_pcie_v1_4_i/mgt_clk rising at 0.000ns
+  Destination Clock:    s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Clock Uncertainty:    0.093ns
+
+  Clock Uncertainty:          0.093ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.172ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i to s6_pcie_v1_4_i/PCIE_A1
+    Location                  Delay type         Delay(ns)  Physical Resource
+                                                            Logical Resource(s)
+    ------------------------------------------------------  -------------------
+    GTPA1_DUAL_X0Y0.RXDATA011 Tgtpcko_RXDATA        1.100   s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+                                                            s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+    PCIE_X0Y0.PIPERXDATAA3    net (fanout=1)        1.379   s6_pcie_v1_4_i/rx_data<11>
+    PCIE_X0Y0.MGTCLK          Tpcicck_MGT           1.200   s6_pcie_v1_4_i/PCIE_A1
+                                                            s6_pcie_v1_4_i/PCIE_A1
+    ------------------------------------------------------  ---------------------------
+    Total                                           3.679ns (2.300ns logic, 1.379ns route)
+                                                            (62.5% logic, 37.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.PIPERXDATAA7), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     4.135ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i (HSIO)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          8.000ns
+  Data Path Delay:      3.665ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.107ns (0.464 - 0.571)
+  Source Clock:         s6_pcie_v1_4_i/mgt_clk rising at 0.000ns
+  Destination Clock:    s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Clock Uncertainty:    0.093ns
+
+  Clock Uncertainty:          0.093ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.172ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i to s6_pcie_v1_4_i/PCIE_A1
+    Location                  Delay type         Delay(ns)  Physical Resource
+                                                            Logical Resource(s)
+    ------------------------------------------------------  -------------------
+    GTPA1_DUAL_X0Y0.RXDATA015 Tgtpcko_RXDATA        1.100   s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+                                                            s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+    PCIE_X0Y0.PIPERXDATAA7    net (fanout=1)        1.365   s6_pcie_v1_4_i/rx_data<15>
+    PCIE_X0Y0.MGTCLK          Tpcicck_MGT           1.200   s6_pcie_v1_4_i/PCIE_A1
+                                                            s6_pcie_v1_4_i/PCIE_A1
+    ------------------------------------------------------  ---------------------------
+    Total                                           3.665ns (2.300ns logic, 1.365ns route)
+                                                            (62.8% logic, 37.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.PIPERXDATAA10), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     4.166ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i (HSIO)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          8.000ns
+  Data Path Delay:      3.634ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.107ns (0.464 - 0.571)
+  Source Clock:         s6_pcie_v1_4_i/mgt_clk rising at 0.000ns
+  Destination Clock:    s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Clock Uncertainty:    0.093ns
+
+  Clock Uncertainty:          0.093ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.172ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i to s6_pcie_v1_4_i/PCIE_A1
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    GTPA1_DUAL_X0Y0.RXDATA02 Tgtpcko_RXDATA        1.100   s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+                                                           s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+    PCIE_X0Y0.PIPERXDATAA10  net (fanout=1)        1.334   s6_pcie_v1_4_i/rx_data<2>
+    PCIE_X0Y0.MGTCLK         Tpcicck_MGT           1.200   s6_pcie_v1_4_i/PCIE_A1
+                                                           s6_pcie_v1_4_i/PCIE_A1
+    -----------------------------------------------------  ---------------------------
+    Total                                          3.634ns (2.300ns logic, 1.334ns route)
+                                                           (63.3% logic, 36.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_s6_pcie_v1_4_i_clk_125 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_125"
+        TS_s6_pcie_v1_4_i_gt_refclk_buf / 1.25 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.PIPERXDATAA0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.254ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i (HSIO)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          0.000ns
+  Data Path Delay:      0.181ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.073ns (0.201 - 0.274)
+  Source Clock:         s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Destination Clock:    s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i to s6_pcie_v1_4_i/PCIE_A1
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    GTPA1_DUAL_X0Y0.RXDATA08 Tgtpcko_RXDATA        0.565   s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+                                                           s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+    PCIE_X0Y0.PIPERXDATAA0   net (fanout=1)        0.466   s6_pcie_v1_4_i/rx_data<8>
+    PCIE_X0Y0.MGTCLK         Tpcickc_MGT (-Th)     0.850   s6_pcie_v1_4_i/PCIE_A1
+                                                           s6_pcie_v1_4_i/PCIE_A1
+    -----------------------------------------------------  ---------------------------
+    Total                                          0.181ns (-0.285ns logic, 0.466ns route)
+                                                           (-157.5% logic, 257.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.PIPERXDATAA9), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.323ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i (HSIO)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          0.000ns
+  Data Path Delay:      0.250ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.073ns (0.201 - 0.274)
+  Source Clock:         s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Destination Clock:    s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i to s6_pcie_v1_4_i/PCIE_A1
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    GTPA1_DUAL_X0Y0.RXDATA01 Tgtpcko_RXDATA        0.565   s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+                                                           s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+    PCIE_X0Y0.PIPERXDATAA9   net (fanout=1)        0.535   s6_pcie_v1_4_i/rx_data<1>
+    PCIE_X0Y0.MGTCLK         Tpcickc_MGT (-Th)     0.850   s6_pcie_v1_4_i/PCIE_A1
+                                                           s6_pcie_v1_4_i/PCIE_A1
+    -----------------------------------------------------  ---------------------------
+    Total                                          0.250ns (-0.285ns logic, 0.535ns route)
+                                                           (-114.0% logic, 214.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.PIPERXCHARISKA1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.363ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i (HSIO)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          0.000ns
+  Data Path Delay:      0.290ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.073ns (0.201 - 0.274)
+  Source Clock:         s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Destination Clock:    s6_pcie_v1_4_i/mgt_clk rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i to s6_pcie_v1_4_i/PCIE_A1
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    GTPA1_DUAL_X0Y0.RXCHARISK00 Tgtpcko_RXCHARISK     0.565   s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+                                                              s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i
+    PCIE_X0Y0.PIPERXCHARISKA1   net (fanout=1)        0.575   s6_pcie_v1_4_i/rx_char_is_k<0>
+    PCIE_X0Y0.MGTCLK            Tpcickc_MGT (-Th)     0.850   s6_pcie_v1_4_i/PCIE_A1
+                                                              s6_pcie_v1_4_i/PCIE_A1
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.290ns (-0.285ns logic, 0.575ns route)
+                                                              (-98.3% logic, 198.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_s6_pcie_v1_4_i_clk_125 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_125"
+        TS_s6_pcie_v1_4_i_gt_refclk_buf / 1.25 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.000ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 8.000ns (125.000MHz) (Tpciper_MGTCLK)
+  Physical resource: s6_pcie_v1_4_i/PCIE_A1/MGTCLK
+  Logical resource: s6_pcie_v1_4_i/PCIE_A1/MGTCLK
+  Location pin: PCIE_X0Y0.MGTCLK
+  Clock network: s6_pcie_v1_4_i/mgt_clk
+--------------------------------------------------------------------------------
+Slack: 1.750ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 6.250ns (160.000MHz) (Tgtpcper_RXUSRCLK)
+  Physical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/RXUSRCLK20
+  Logical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/RXUSRCLK20
+  Location pin: GTPA1_DUAL_X0Y0.RXUSRCLK20
+  Clock network: s6_pcie_v1_4_i/mgt_clk
+--------------------------------------------------------------------------------
+Slack: 1.750ns (period - min period limit)
+  Period: 8.000ns
+  Min period limit: 6.250ns (160.000MHz) (Tgtpcper_TXUSRCLK)
+  Physical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/TXUSRCLK20
+  Logical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/TXUSRCLK20
+  Location pin: GTPA1_DUAL_X0Y0.TXUSRCLK20
+  Clock network: s6_pcie_v1_4_i/mgt_clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_s6_pcie_v1_4_i_clk_250 = PERIOD TIMEGRP 
+"s6_pcie_v1_4_i_clk_250"         TS_s6_pcie_v1_4_i_gt_refclk_buf / 2.5 HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.125ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_s6_pcie_v1_4_i_clk_250 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_250"
+        TS_s6_pcie_v1_4_i_gt_refclk_buf / 2.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.875ns (period - min period limit)
+  Period: 4.000ns
+  Min period limit: 3.125ns (320.000MHz) (Tgtpcper_RXUSRCLK)
+  Physical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/RXUSRCLK0
+  Logical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/RXUSRCLK0
+  Location pin: GTPA1_DUAL_X0Y0.RXUSRCLK0
+  Clock network: s6_pcie_v1_4_i/mgt_clk_2x
+--------------------------------------------------------------------------------
+Slack: 0.875ns (period - min period limit)
+  Period: 4.000ns
+  Min period limit: 3.125ns (320.000MHz) (Tgtpcper_TXUSRCLK)
+  Physical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/TXUSRCLK0
+  Logical resource: s6_pcie_v1_4_i/GT_i/tile0_gtpa1_dual_wrapper_i/gtpa1_dual_i/TXUSRCLK0
+  Location pin: GTPA1_DUAL_X0Y0.TXUSRCLK0
+  Clock network: s6_pcie_v1_4_i/mgt_clk_2x
+--------------------------------------------------------------------------------
+Slack: 2.270ns (period - min period limit)
+  Period: 4.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: s6_pcie_v1_4_i/mgt2x_bufg/I0
+  Logical resource: s6_pcie_v1_4_i/mgt2x_bufg/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: s6_pcie_v1_4_i/clk_250
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_s6_pcie_v1_4_i_clk_62_5 = PERIOD TIMEGRP 
+"s6_pcie_v1_4_i_clk_62_5"         TS_s6_pcie_v1_4_i_gt_refclk_buf / 0.625 HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 28156 paths analyzed, 4908 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  16.000ns.
+--------------------------------------------------------------------------------
+
+Paths for end point app/BMD/BMD_EP/EP_TX/trn_td_20 (SLICE_X12Y106.C4), 42 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.771ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Destination:          app/BMD/BMD_EP/EP_TX/trn_td_20 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      10.113ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.236 - 0.247)
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: s6_pcie_v1_4_i/PCIE_A1 to app/BMD/BMD_EP/EP_TX/trn_td_20
+    Location                            Delay type         Delay(ns)  Physical Resource
+                                                                      Logical Resource(s)
+    ----------------------------------------------------------------  -------------------
+    PCIE_X0Y0.CFGCOMMANDBUSMASTERENABLE Tpcicko_CFG           1.600   s6_pcie_v1_4_i/PCIE_A1
+                                                                      s6_pcie_v1_4_i/PCIE_A1
+    SLICE_X10Y102.D5                    net (fanout=17)       1.574   cfg_command<2>
+    SLICE_X10Y102.D                     Tilo                  0.203   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_nosnoop_o
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In21
+    SLICE_X13Y104.A3                    net (fanout=13)       0.726   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In2
+    SLICE_X13Y104.A                     Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_tag_o<3>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>111
+    SLICE_X23Y108.B1                    net (fanout=10)       2.321   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>11
+    SLICE_X23Y108.B                     Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_rid_o<7>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>3
+    SLICE_X23Y108.A5                    net (fanout=1)        0.187   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>3
+    SLICE_X23Y108.A                     Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_rid_o<7>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>4
+    SLICE_X12Y106.C4                    net (fanout=1)        2.384   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>4
+    SLICE_X12Y106.CLK                   Tas                   0.341   trn_td<20>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>6
+                                                                      app/BMD/BMD_EP/EP_TX/trn_td_20
+    ----------------------------------------------------------------  ---------------------------
+    Total                                                    10.113ns (2.921ns logic, 7.192ns route)
+                                                                      (28.9% logic, 71.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.792ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Destination:          app/BMD/BMD_EP/EP_TX/trn_td_20 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      10.092ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.236 - 0.247)
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: s6_pcie_v1_4_i/PCIE_A1 to app/BMD/BMD_EP/EP_TX/trn_td_20
+    Location                            Delay type         Delay(ns)  Physical Resource
+                                                                      Logical Resource(s)
+    ----------------------------------------------------------------  -------------------
+    PCIE_X0Y0.CFGCOMMANDBUSMASTERENABLE Tpcicko_CFG           1.600   s6_pcie_v1_4_i/PCIE_A1
+                                                                      s6_pcie_v1_4_i/PCIE_A1
+    SLICE_X10Y101.B4                    net (fanout=17)       1.647   cfg_command<2>
+    SLICE_X10Y101.B                     Tilo                  0.203   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>4
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd1-In51
+    SLICE_X13Y104.A5                    net (fanout=6)        0.632   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd1-In5
+    SLICE_X13Y104.A                     Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_tag_o<3>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>111
+    SLICE_X23Y108.B1                    net (fanout=10)       2.321   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>11
+    SLICE_X23Y108.B                     Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_rid_o<7>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>3
+    SLICE_X23Y108.A5                    net (fanout=1)        0.187   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>3
+    SLICE_X23Y108.A                     Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_rid_o<7>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>4
+    SLICE_X12Y106.C4                    net (fanout=1)        2.384   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>4
+    SLICE_X12Y106.CLK                   Tas                   0.341   trn_td<20>
+                                                                      app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>6
+                                                                      app/BMD/BMD_EP/EP_TX/trn_td_20
+    ----------------------------------------------------------------  ---------------------------
+    Total                                                    10.092ns (2.921ns logic, 7.171ns route)
+                                                                      (28.9% logic, 71.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.880ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_start_o (FF)
+  Destination:          app/BMD/BMD_EP/EP_TX/trn_td_20 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      10.004ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.236 - 0.247)
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_start_o to app/BMD/BMD_EP/EP_TX/trn_td_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y102.AQ     Tcko                  0.391   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_start_o
+                                                       app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_start_o
+    SLICE_X10Y102.D4     net (fanout=16)       2.674   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_start_o
+    SLICE_X10Y102.D      Tilo                  0.203   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_nosnoop_o
+                                                       app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In21
+    SLICE_X13Y104.A3     net (fanout=13)       0.726   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In2
+    SLICE_X13Y104.A      Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_tag_o<3>
+                                                       app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>111
+    SLICE_X23Y108.B1     net (fanout=10)       2.321   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>11
+    SLICE_X23Y108.B      Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_rid_o<7>
+                                                       app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>3
+    SLICE_X23Y108.A5     net (fanout=1)        0.187   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>3
+    SLICE_X23Y108.A      Tilo                  0.259   app/BMD/BMD_EP/EP_RX/req_rid_o<7>
+                                                       app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>4
+    SLICE_X12Y106.C4     net (fanout=1)        2.384   app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>4
+    SLICE_X12Y106.CLK    Tas                   0.341   trn_td<20>
+                                                       app/BMD/BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<20>6
+                                                       app/BMD/BMD_EP/EP_TX/trn_td_20
+    -------------------------------------------------  ---------------------------
+    Total                                     10.004ns (1.712ns logic, 8.292ns route)
+                                                       (17.1% logic, 82.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 (SLICE_X6Y110.SR), 36 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     6.054ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 (FF)
+  Destination:          app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      9.841ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 to app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y110.BQ      Tcko                  0.447   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<7>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    SLICE_X25Y109.C4     net (fanout=3)        2.870   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<5>
+    SLICE_X25Y109.C      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B4     net (fanout=1)        0.327   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5_SW0
+    SLICE_X25Y109.A5     net (fanout=1)        0.187   app/BMD/N65
+    SLICE_X25Y109.A      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5
+    SLICE_X13Y100.D2     net (fanout=3)        3.313   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o
+    SLICE_X13Y100.D      Tilo                  0.259   app/BMD/BMD_EP/EP_TX/cur_mwr_dw_count<0>
+                                                       app/BMD/BMD_EP/EP_TX/_n05661
+    SLICE_X6Y110.SR      net (fanout=2)        1.219   app/BMD/BMD_EP/EP_TX/_n0566
+    SLICE_X6Y110.CLK     Tsrck                 0.442   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<7>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.841ns (1.925ns logic, 7.916ns route)
+                                                       (19.6% logic, 80.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.133ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_2 (FF)
+  Destination:          app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      9.754ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.008ns (0.155 - 0.163)
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_2 to app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y109.CQ      Tcko                  0.447   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<3>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_2
+    SLICE_X25Y109.A2     net (fanout=2)        3.815   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<2>
+    SLICE_X25Y109.A      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5
+    SLICE_X13Y100.D2     net (fanout=3)        3.313   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o
+    SLICE_X13Y100.D      Tilo                  0.259   app/BMD/BMD_EP/EP_TX/cur_mwr_dw_count<0>
+                                                       app/BMD/BMD_EP/EP_TX/_n05661
+    SLICE_X6Y110.SR      net (fanout=2)        1.219   app/BMD/BMD_EP/EP_TX/_n0566
+    SLICE_X6Y110.CLK     Tsrck                 0.442   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<7>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.754ns (1.407ns logic, 8.347ns route)
+                                                       (14.4% logic, 85.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.191ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_6 (FF)
+  Destination:          app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      9.704ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_6 to app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y110.CQ      Tcko                  0.447   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<7>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_6
+    SLICE_X25Y109.C5     net (fanout=2)        2.733   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<6>
+    SLICE_X25Y109.C      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B4     net (fanout=1)        0.327   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5_SW0
+    SLICE_X25Y109.A5     net (fanout=1)        0.187   app/BMD/N65
+    SLICE_X25Y109.A      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5
+    SLICE_X13Y100.D2     net (fanout=3)        3.313   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o
+    SLICE_X13Y100.D      Tilo                  0.259   app/BMD/BMD_EP/EP_TX/cur_mwr_dw_count<0>
+                                                       app/BMD/BMD_EP/EP_TX/_n05661
+    SLICE_X6Y110.SR      net (fanout=2)        1.219   app/BMD/BMD_EP/EP_TX/_n0566
+    SLICE_X6Y110.CLK     Tsrck                 0.442   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<7>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.704ns (1.925ns logic, 7.779ns route)
+                                                       (19.8% logic, 80.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1 (SLICE_X6Y109.SR), 36 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     6.057ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 (FF)
+  Destination:          app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      9.828ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.010ns (0.154 - 0.164)
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5 to app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y110.BQ      Tcko                  0.447   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<7>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5
+    SLICE_X25Y109.C4     net (fanout=3)        2.870   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<5>
+    SLICE_X25Y109.C      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B4     net (fanout=1)        0.327   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5_SW0
+    SLICE_X25Y109.A5     net (fanout=1)        0.187   app/BMD/N65
+    SLICE_X25Y109.A      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5
+    SLICE_X13Y100.D2     net (fanout=3)        3.313   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o
+    SLICE_X13Y100.D      Tilo                  0.259   app/BMD/BMD_EP/EP_TX/cur_mwr_dw_count<0>
+                                                       app/BMD/BMD_EP/EP_TX/_n05661
+    SLICE_X6Y109.SR      net (fanout=2)        1.206   app/BMD/BMD_EP/EP_TX/_n0566
+    SLICE_X6Y109.CLK     Tsrck                 0.442   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<3>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.828ns (1.925ns logic, 7.903ns route)
+                                                       (19.6% logic, 80.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.154ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_2 (FF)
+  Destination:          app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      9.741ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_2 to app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y109.CQ      Tcko                  0.447   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<3>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_2
+    SLICE_X25Y109.A2     net (fanout=2)        3.815   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<2>
+    SLICE_X25Y109.A      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5
+    SLICE_X13Y100.D2     net (fanout=3)        3.313   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o
+    SLICE_X13Y100.D      Tilo                  0.259   app/BMD/BMD_EP/EP_TX/cur_mwr_dw_count<0>
+                                                       app/BMD/BMD_EP/EP_TX/_n05661
+    SLICE_X6Y109.SR      net (fanout=2)        1.206   app/BMD/BMD_EP/EP_TX/_n0566
+    SLICE_X6Y109.CLK     Tsrck                 0.442   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<3>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.741ns (1.407ns logic, 8.334ns route)
+                                                       (14.4% logic, 85.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.194ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_6 (FF)
+  Destination:          app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      9.691ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.010ns (0.154 - 0.164)
+  Source Clock:         trn_clk rising at 0.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.105ns
+
+  Clock Uncertainty:          0.105ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.198ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_6 to app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y110.CQ      Tcko                  0.447   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<7>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_6
+    SLICE_X25Y109.C5     net (fanout=2)        2.733   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<6>
+    SLICE_X25Y109.C      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B4     net (fanout=1)        0.327   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o4
+    SLICE_X25Y109.B      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5_SW0
+    SLICE_X25Y109.A5     net (fanout=1)        0.187   app/BMD/N65
+    SLICE_X25Y109.A      Tilo                  0.259   app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_perf_post<27>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o5
+    SLICE_X13Y100.D2     net (fanout=3)        3.313   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt[7]_mwr_wrr_cnt_i[7]_not_equal_42_o
+    SLICE_X13Y100.D      Tilo                  0.259   app/BMD/BMD_EP/EP_TX/cur_mwr_dw_count<0>
+                                                       app/BMD/BMD_EP/EP_TX/_n05661
+    SLICE_X6Y109.SR      net (fanout=2)        1.206   app/BMD/BMD_EP/EP_TX/_n0566
+    SLICE_X6Y109.CLK     Tsrck                 0.442   app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt<3>
+                                                       app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.691ns (1.925ns logic, 7.766ns route)
+                                                       (19.9% logic, 80.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_s6_pcie_v1_4_i_clk_62_5 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_62_5"
+        TS_s6_pcie_v1_4_i_gt_refclk_buf / 0.625 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.CFGDWADDR4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.144ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               app/BMD/BMD_CF/cfg_rd_en_n (FF)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          0.000ns
+  Data Path Delay:      0.132ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.012ns (0.195 - 0.207)
+  Source Clock:         trn_clk rising at 16.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: app/BMD/BMD_CF/cfg_rd_en_n to s6_pcie_v1_4_i/PCIE_A1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y95.AQ      Tcko                  0.234   cfg_rd_en_n
+                                                       app/BMD/BMD_CF/cfg_rd_en_n
+    SLICE_X14Y95.B2      net (fanout=3)        0.239   cfg_rd_en_n
+    SLICE_X14Y95.B       Tilo                  0.156   cfg_rd_en_n
+                                                       app/BMD/cfg_rd_en_n_inv1_INV_0
+    PCIE_X0Y0.CFGDWADDR4 net (fanout=1)        0.353   cfg_dwaddr<4>
+    PCIE_X0Y0.USERCLK    Tpcickc_CFG (-Th)     0.850   s6_pcie_v1_4_i/PCIE_A1
+                                                       s6_pcie_v1_4_i/PCIE_A1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.132ns (-0.460ns logic, 0.592ns route)
+                                                       (-348.5% logic, 448.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.TRNTD24), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.220ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               app/BMD/BMD_EP/EP_TX/trn_td_24 (FF)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          0.000ns
+  Data Path Delay:      0.225ns (Levels of Logic = 0)
+  Clock Path Skew:      0.005ns (0.068 - 0.063)
+  Source Clock:         trn_clk rising at 16.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: app/BMD/BMD_EP/EP_TX/trn_td_24 to s6_pcie_v1_4_i/PCIE_A1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y105.CQ     Tcko                  0.200   trn_td<24>
+                                                       app/BMD/BMD_EP/EP_TX/trn_td_24
+    PCIE_X0Y0.TRNTD24    net (fanout=2)        0.875   trn_td<24>
+    PCIE_X0Y0.USERCLK    Tpcickd_TRNTD(-Th)     0.850   s6_pcie_v1_4_i/PCIE_A1
+                                                       s6_pcie_v1_4_i/PCIE_A1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.225ns (-0.650ns logic, 0.875ns route)
+                                                       (-288.9% logic, 388.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point s6_pcie_v1_4_i/PCIE_A1 (PCIE_X0Y0.CFGDWADDR1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.247ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               app/BMD/BMD_CF/cfg_dwaddr_1 (FF)
+  Destination:          s6_pcie_v1_4_i/PCIE_A1 (CPU)
+  Requirement:          0.000ns
+  Data Path Delay:      0.233ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.014ns (0.195 - 0.209)
+  Source Clock:         trn_clk rising at 16.000ns
+  Destination Clock:    trn_clk rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: app/BMD/BMD_CF/cfg_dwaddr_1 to s6_pcie_v1_4_i/PCIE_A1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y95.BQ      Tcko                  0.198   cfg_dwaddr<3>
+                                                       app/BMD/BMD_CF/cfg_dwaddr_1
+    PCIE_X0Y0.CFGDWADDR1 net (fanout=2)        0.885   cfg_dwaddr<1>
+    PCIE_X0Y0.USERCLK    Tpcickc_CFG (-Th)     0.850   s6_pcie_v1_4_i/PCIE_A1
+                                                       s6_pcie_v1_4_i/PCIE_A1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.233ns (-0.652ns logic, 0.885ns route)
+                                                       (-279.8% logic, 379.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_s6_pcie_v1_4_i_clk_62_5 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_62_5"
+        TS_s6_pcie_v1_4_i_gt_refclk_buf / 0.625 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.000ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 16.000ns (62.500MHz) (Tpciper_USERCLK)
+  Physical resource: s6_pcie_v1_4_i/PCIE_A1/USERCLK
+  Logical resource: s6_pcie_v1_4_i/PCIE_A1/USERCLK
+  Location pin: PCIE_X0Y0.USERCLK
+  Clock network: trn_clk
+--------------------------------------------------------------------------------
+Slack: 12.876ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: s6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/ramb16/CLKA
+  Logical resource: s6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/ramb16/CLKA
+  Location pin: RAMB16_X0Y58.CLKA
+  Clock network: trn_clk
+--------------------------------------------------------------------------------
+Slack: 12.876ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB)
+  Physical resource: s6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/ramb16/CLKB
+  Logical resource: s6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[0].ram/ramb16/CLKB
+  Location pin: RAMB16_X0Y58.CLKB
+  Clock network: trn_clk
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_GT_REFCLK_OUT
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_GT_REFCLK_OUT               |     10.000ns|      0.925ns|     10.000ns|            0|            0|            0|        28201|
+| TS_s6_pcie_v1_4_i_gt_refclk_bu|     10.000ns|      3.334ns|     10.000ns|            0|            0|            0|        28201|
+| f                             |             |             |             |             |             |             |             |
+|  TS_s6_pcie_v1_4_i_clk_125    |      8.000ns|      8.000ns|          N/A|            0|            0|           45|            0|
+|  TS_s6_pcie_v1_4_i_clk_250    |      4.000ns|      3.125ns|          N/A|            0|            0|            0|            0|
+|  TS_s6_pcie_v1_4_i_clk_62_5   |     16.000ns|     16.000ns|          N/A|            0|            0|        28156|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 28201 paths, 0 nets, and 6592 connections
+
+Design statistics:
+   Minimum period:  16.000ns{1}   (Maximum frequency:  62.500MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Mar 20 21:39:05 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 306 MB
+
+
+

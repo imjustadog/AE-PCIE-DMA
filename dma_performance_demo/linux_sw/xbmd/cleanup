@@ -1,0 +1,101 @@
+#! /usr/bin/perl
+$SCRIPT_NAME = "cleanup";
+
+$TARGET_NAME = "two_port_switch_x*";
+$START_TIME       = `date +%s`;
+
+sub print_usage
+{
+  print ("Usage: $SCRIPT_NAME \n");  
+  print ("\n");  
+}
+
+sub cleanup
+{
+  print ("\nINFO: Cleaning up old files\n");
+  $status = 0;
+  $status += system("rm -f *~*");
+  $status += system("rm -rf *.txt*");
+  $status += system("rm -f *Mod*");
+  $status += system("rm -f *mod*");
+  $status += system("rm -f *.bak*");
+  $status += system("rm -rf *.ko*");
+  $status += system("rm -rf *.o*");
+  $status += system("rm -rf xbmd_app");
+  if($status != 0)
+  {
+    print ("ERROR: Unable to cleanup directory.\n");
+    print ("     : $SCRIPT_NAME Terminating!\n");
+    print ("\n");
+    exit 1;
+  }
+}
+
+
+
+sub calc_run_time
+{
+  my $hrs      = 0;
+  my $mins     = 0;
+  my $secs     = 0;
+  my $tmp_time = 0;
+  my $runtime  = 0;
+  
+  $runtime = `date +%s` - "@_";
+
+  $tmp_time = $runtime;
+  while ($tmp_time > 3599)
+  {
+     $hrs++;
+     $tmp_time = $tmp_time - 3600;
+  }
+  
+  $tmp_time = $runtime - ($hrs * 3600);
+  while ($tmp_time > 59)
+  {
+     $mins++;
+     $tmp_time = $tmp_time - 60;
+  }
+  
+  $secs = $runtime - (($hrs * 3600) + ($mins * 60));
+  
+  # Add zero padding for improved time display
+  if ($secs < 10)
+  {
+     $runtime = ":0$secs";
+  }
+  else
+  {
+     $runtime = ":$secs";
+  }
+  
+  if ($mins < 10)
+  {
+     $runtime = ":0$mins".$runtime;
+  }
+  else
+  {
+     $runtime = ":$mins".$runtime;
+  }
+  
+  if ($hrs < 10)
+  {
+     $runtime = "0$hrs".$runtime;
+  }
+  else
+  {
+     $runtime = "$hrs".$runtime;
+  }
+  return $runtime;
+} # calc_run_time
+
+
+######################### 
+# Program Main Function #
+#########################
+print("\n");
+print ("\nINFO: XBMD Directory Cleanup Script\n\n");
+&cleanup;
+$RUN_TIME = &calc_run_time($START_TIME);
+print ("\nINFO: $SCRIPT_NAME complete($RUN_TIME)\n\n");
+

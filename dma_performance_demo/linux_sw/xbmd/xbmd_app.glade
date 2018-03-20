@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.4.4 on Wed Mar 25 11:07:49 2009 -->
+<glade-interface>
+  <widget class="GtkWindow" id="main_window">
+    <property name="window_position">GTK_WIN_POS_CENTER</property>
+    <property name="default_width">675</property>
+    <property name="default_height">700</property>
+    <signal name="destroy" handler="on_main_window_destroy"/>
+    <child>
+      <widget class="GtkVBox" id="top_level_box">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkMenuBar" id="menubar1">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkMenuItem" id="menuitem">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_File</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="new_menu_item">
+                        <property name="visible">True</property>
+                        <property name="tooltip" translatable="yes">Quit XMBD </property>
+                        <property name="label" translatable="yes">gtk-quit</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="gtk_main_quit"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="menu-item-image1">
+                            <property name="stock">gtk-quit</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkNotebook" id="notebook1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <child>
+              <widget class="GtkHBox" id="xbmd_space_box">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkVBox" id="write_params_entry1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkHBox" id="negotiated_link_width_box">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="link_width_text">
+                            <property name="visible">True</property>
+                            <property name="xalign">1</property>
+                            <property name="label" translatable="yes">Negotiated Link Width = X</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="link_width">
+                            <property name="visible">True</property>
+                            <property name="xalign">0</property>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="negotiated_link_speed_box">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="link_speed_text">
+                            <property name="visible">True</property>
+                            <property name="xalign">1</property>
+                            <property name="label" translatable="yes">Negotiated Link Speed = GEN</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="link_speed">
+                            <property name="visible">True</property>
+                            <property name="xalign">0</property>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHSeparator" id="hseparator1">
+                        <property name="visible">True</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="run_count_iterations_left_box">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkVBox" id="vbox6">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="label2">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">Run Count (1-1M)</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkSpinButton" id="run_count_spinner">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="has_tooltip">True</property>
+                                <property name="tooltip" translatable="yes">Run Count Entry</property>
+                                <property name="adjustment">1 1 1000000 1 10 10</property>
+                                <property name="climb_rate">200</property>
+                                <signal name="value_changed" handler="on_run_count_spinner_value_changed"/>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="vbox7">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="iter_count_label">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">Iterations Left</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="iter_count_disp">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkButton" id="start_button">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="label" translatable="yes">START</property>
+                        <property name="use_underline">True</property>
+                        <property name="response_id">0</property>
+                        <signal name="clicked" handler="on_start_button_clicked"/>
+                      </widget>
+                      <packing>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHSeparator" id="hseparator8">
+                        <property name="visible">True</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="padding">3</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="wr_params">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Write Transfer Parameters:</property>
+                        <property name="use_markup">True</property>
+                        <property name="use_underline">True</property>
+                      </widget>
+                      <packing>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="write_check_box1">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkHBox" id="fill1">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkCheckButton" id="write_checkbox">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="label" translatable="yes">Write</property>
+                            <property name="response_id">0</property>
+                            <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_write_checkbox_toggled"/>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="fill2">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="wr_tlp_size_box1">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="wr_tlp_size">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">Write TLP Size
+(DWORDS)</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="wr_tlp_size_bo1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkSpinButton" id="wr_tlp_box">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="adjustment">32 1 32 1 10 10</property>
+                                <signal name="value_changed" handler="on_wr_tlp_box_value_changed"/>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill15">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="wr_num_tlps_box1">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="wr_num_tlps_label">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">TLP's to Transfer
+</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="wr_num_tlps1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkSpinButton" id="wr_num_tlps_spinner">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="adjustment">32 1 32 1 10 10</property>
+                                <property name="climb_rate">72.189999999999998</property>
+                                <signal name="value_changed" handler="on_wr_num_tlps_spinner_value_changed"/>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill16">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">9</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="wr_tlp_pattern_box3">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="wr_tlp_pattern_label">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">Write TLP Pattern (8 hex values)</property>
+                          </widget>
+                          <packing>
+                            <property name="padding">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="vbox4">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkEntry" id="wr_tlp_pattern_entry">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="max_length">8</property>
+                                <property name="text" translatable="yes">FEEDBEEF</property>
+                                <signal name="changed" handler="on_wr_tlp_pattern_entry_changed"/>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill17">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">10</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="wr_tlp_pattern_box4">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="wr_bytes_to_transfer_label">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">Bytes to Transfer</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="bytes_to_trans_box1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkHBox" id="hbox9">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkLabel" id="wr_bytes_to_transfer">
+                                    <property name="visible">True</property>
+                                    <property name="xalign">0</property>
+                                    <property name="label" translatable="yes">4096</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkHBox" id="hbox10">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="padding">10</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill18">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">11</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkVBox" id="wr_results_box1">
+                        <property name="visible">True</property>
+                        <property name="extension_events">GDK_EXTENSION_EVENTS_CURSOR</property>
+                        <property name="border_width">2</property>
+                        <child>
+                          <widget class="GtkHSeparator" id="hseparator12">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="write_results_label1">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Write Results:</property>
+                            <property name="single_line_mode">True</property>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="bytes_trans_bo1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="wr_bytes_trans_label1">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.10000000149011612</property>
+                                <property name="label" translatable="yes">Bytes Transferred:</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="wr_bytes_transferred_text">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHSeparator" id="hseparator13">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="padding">3</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="wr_mbps_box1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="wr_mbp_label1">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.10000000149011612</property>
+                                <property name="label" translatable="yes">Mbps</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="wr_mbps_text">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHSeparator" id="hseparator14">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="padding">4</property>
+                            <property name="position">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="wr_status_box1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="wr_status_label1">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.10000000149011612</property>
+                                <property name="label" translatable="yes">Status</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="wr_status_text">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">Valid Write Pattern</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">6</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">12</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHSeparator" id="hseparator15">
+                        <property name="visible">True</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="position">13</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkVSeparator" id="vseparator1">
+                    <property name="width_request">7</property>
+                    <property name="visible">True</property>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkVBox" id="read_params_box1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkVBox" id="xilinx_logo">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkHBox" id="hbox11">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkImage" id="image">
+                                <property name="visible">True</property>
+                                <property name="pixbuf">xilinx.png</property>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="xbmd_label">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Xilinx XBMD 
+Performance Demo</property>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkHSeparator" id="hseparator16">
+                        <property name="visible">True</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="padding">3</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="rd_params">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Read Transfer Parameters:</property>
+                      </widget>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="rd_check_box1">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkHBox" id="fill19">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkCheckButton" id="read_checkbox">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="label" translatable="yes">Read</property>
+                            <property name="response_id">0</property>
+                            <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_read_checkbox_toggled"/>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="fill20">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="rd_tlp_size_box1">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="rd_tlp_size1">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">Read TLP Size
+(DWORDS)</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="rd_tlp_size_bo1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkSpinButton" id="rd_tlp_box">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="adjustment">32 1 32 1 10 10</property>
+                                <signal name="value_changed" handler="on_rd_tlp_box_value_changed"/>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill21">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="rd_num_tlp_box1">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="rd_num_tlps_label1">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">TLP's To Transfer</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="rd_num_tlps1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkSpinButton" id="rd_num_tlps_spinner">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="adjustment">32 1 32 1 10 10</property>
+                                <property name="climb_rate">72.189999999999998</property>
+                                <signal name="value_changed" handler="on_rd_num_tlps_spinner_value_changed"/>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill22">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="rd_tlp_pattern_box1">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="rd_tlp_pattern_label">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">Read TLP Pattern (8 hex values)</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="rd_tlp_patt_box1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkEntry" id="rd_tlp_pattern_entry">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="max_length">8</property>
+                                <property name="text" translatable="yes">FEEDBEEF</property>
+                                <signal name="changed" handler="on_rd_tlp_pattern_entry_changed"/>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill23">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="wr_tlp_pattern_box5">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="rd_bytes_to_transfer_label1">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.10000000149011612</property>
+                            <property name="label" translatable="yes">Bytes to Transfer</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkVBox" id="rd_bytes_trans_box_top1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkHBox" id="rd_bytes_trans_box1">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkLabel" id="rd_bytes_to_transfer">
+                                    <property name="visible">True</property>
+                                    <property name="label" translatable="yes">4096</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkHBox" id="hbox12">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="padding">12</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkVBox" id="fill24">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkVBox" id="rd_results_box1">
+                        <property name="visible">True</property>
+                        <property name="border_width">2</property>
+                        <child>
+                          <widget class="GtkHSeparator" id="hseparator17">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="padding">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="read_results_label">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Read Results:</property>
+                            <property name="use_underline">True</property>
+                            <property name="single_line_mode">True</property>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="bytes_trans_box1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="rd_bytes_trans_label">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.10000000149011612</property>
+                                <property name="label" translatable="yes">Bytes Transferred:</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="rd_bytes_transferred_text">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHSeparator" id="hseparator18">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="padding">3</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="rd_mbps_box1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="rd_mbps_label">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.10000000149011612</property>
+                                <property name="label" translatable="yes">Mbps</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="rd_mbps_text">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHSeparator" id="hseparator19">
+                            <property name="visible">True</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="padding">4</property>
+                            <property name="position">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="rd_status_box1">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkLabel" id="rd_status_label">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.10000000149011612</property>
+                                <property name="label" translatable="yes">Status</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="rd_status_text">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">Valid Read Pattern</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">6</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkHSeparator" id="hseparator20">
+                        <property name="visible">True</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="position">9</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">XBMD</property>
+              </widget>
+              <packing>
+                <property name="type">tab</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkVBox" id="cfg_space_box">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkButton" id="read_cfg_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="label" translatable="yes">Read EP Type0 CFG Space</property>
+                    <property name="response_id">0</property>
+                    <signal name="clicked" handler="on_read_cfg_button_clicked"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkScrolledWindow" id="scrolledwindow2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <child>
+                      <widget class="GtkViewport" id="viewport1">
+                        <property name="visible">True</property>
+                        <property name="resize_mode">GTK_RESIZE_QUEUE</property>
+                        <child>
+                          <widget class="GtkTextView" id="cfg_space">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="read config">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Read_CFG</property>
+              </widget>
+              <packing>
+                <property name="type">tab</property>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkVBox" id="bmd_descriptor_box">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkButton" id="read_bmd_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="label" translatable="yes">Read BMD Descriptor Registers</property>
+                    <property name="response_id">0</property>
+                    <signal name="clicked" handler="on_read_bmd_button_clicked"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkScrolledWindow" id="scrolledwindow3">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <child>
+                      <widget class="GtkTextView" id="bmd_space">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                      </widget>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="read bmd">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Read_BMD</property>
+              </widget>
+              <packing>
+                <property name="type">tab</property>
+                <property name="position">2</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkVBox" id="bmd_log_box">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkScrolledWindow" id="bmd_log_scrolled_window">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <child>
+                      <widget class="GtkTextView" id="xbmd_log">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="bmd_log">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">View BMD log</property>
+              </widget>
+              <packing>
+                <property name="type">tab</property>
+                <property name="position">3</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkStatusbar" id="main_statusbar">
+            <property name="visible">True</property>
+            <property name="spacing">2</property>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>

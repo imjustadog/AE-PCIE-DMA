@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4.1 (64-bit)
+# SW Build 1149489 on Thu Feb 19 16:23:09 MST 2015
+# IP Build 1147552 on Wed Feb 18 14:25:16 MST 2015
+# Start of session at: Tue Mar 17 14:36:39 2015
+# Process ID: 13936
+# Log file: c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/impl_1/xilinx_pcie_2_1_ep_7x.vdi
+# Journal file: c:/Work_projects/pcie_7x_0_example/pcie_7x_0_example.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source xilinx_pcie_2_1_ep_7x.tcl -notrace

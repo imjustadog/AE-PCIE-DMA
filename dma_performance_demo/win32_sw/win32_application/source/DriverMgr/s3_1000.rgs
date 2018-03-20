@@ -1,0 +1,25 @@
+HKCR
+{
+	DriverMgr2.s3_1000.1 = s 's3_1000 Class'
+	{
+		CLSID = s '{5B145E4D-5D9E-45f6-B580-ADBD48380118}'
+	}
+	DriverMgr2.s3_1000 = s 's3_1000 Class'
+	{
+		CLSID = s '{5B145E4D-5D9E-45f6-B580-ADBD48380118}'
+		CurVer = s 'DriverMgr2.s3_1000.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5B145E4D-5D9E-45f6-B580-ADBD48380118} = s 's3_1000 Class'
+		{
+			ProgID = s 'DriverMgr2.s3_1000.1'
+			VersionIndependentProgID = s 'DriverMgr2.s3_1000'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+			}
+			'TypeLib' = s '{FE9E3996-959F-4054-B3CE-A0EDA2AA0C31}'
+		}
+	}
+}

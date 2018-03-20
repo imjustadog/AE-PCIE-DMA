@@ -1,0 +1,125 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Projects_2007\PCIe\PCIe_Perf\Deploy\V2.0.1
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+xilinx_pci_exp_1_lane_epipe_ep_v18a.bit=
+xilinx_pci_exp_1_lane_epipe_ep_v18a.mcs=
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Projects_2006\PCIe_Perf\3s1000\DriverMgr\ReleaseMinDependency\DriverMgr2.dll=
+C:\Projects_2006\PCIe_Perf\3s1000\Driver\S3_1000_Perf\sourceWDM\objfre_wxp_x86\i386\pcie_demo.sys=
+C:\Program Files\Avnet\PCIe_Perf\PCIe_Perf\DriverMgr2.dll=
+C:\Projects_2006\PCIe_Perf\3s1000\DriverMgr\Debug\DriverMgr.dll=
+C:\Program Files\Avnet\PCIe_Perf\DriverMgr2.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+c:\projects_2006\pcie_perf\3s1000\driver\s3_1000_perf\sourcewdm\objfre_wxp_x86\i386\pcie_demo.sys=
+c:\projects_2006\pcie_perf\3s1000\driver\s3_1000_perf\oemsetupxp.inf=
+c:\projects_2006\pcie_perf\3s1000\bdm\xilinx_pci_exp_1_lane_epipe_ep_v19.bit=
+c:\projects_2006\pcie_perf\3s1000\bdm\xilinx_pci_exp_1_lane_epipe_ep_v19.mcs=
+c:\projects_2006\pcie_perf\3s1000\drivermgr\releasemindependency\drivermgr2.dll=
+
+[Package|Standard Setup Package 1|Files Removed]
+c:\projects_2006\pcie_perf\3s1000\bdm\xilinx_pci_exp_1_lane_epipe_ep_v18a.bit=
+c:\projects_2006\pcie_perf\3s1000\bdm\xilinx_pci_exp_1_lane_epipe_ep_v18a.mcs=
+c:\projects_2006\pcie_perf\3s1000\drivermgr\debug\drivermgr.dll=
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\Projects_2006\PCIe_Perf\3s1000\GUI\PCIe_Perf.exe=Yes
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\oleaut32.dll=Yes
+C:\WINDOWS\SYSTEM32\olepro32.dll=Yes
+C:\WINDOWS\SYSTEM32\asycfilt.dll=Yes
+C:\WINDOWS\SYSTEM32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Projects_2006\PCIe_Perf\3s1000\Driver\S3_1000_Perf\sourceWDM\objfre_wxp_x86\i386\pcie_demo.sys=Yes
+C:\Projects_2006\PCIe_Perf\3s1000\Driver\S3_1000_Perf\oemsetupXP.inf=Yes
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v19.bit=Yes
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v19.mcs=Yes
+C:\Program Files\Avnet\PCIe_Perf\DriverMgr2.dll=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\Projects_2006\PCIe_Perf\3s1000\GUI\PCIe_Perf.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Projects_2006\PCIe_Perf\3s1000\DriverMgr\ReleaseMinDependency\DriverMgr2.dll=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Projects_2006\PCIe_Perf\3s1000\Driver\S3_1000_Perf\sourceWDM\objfre_wxp_x86\i386\pcie_demo.sys=$(AppPath)
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v18a.mcs=$(AppPath)\BDM
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v18a.bit=$(AppPath)\BDM
+C:\Projects_2006\PCIe_Perf\3s1000\Driver\S3_1000_Perf\oemsetupXP.inf=$(AppPath)
+C:\Program Files\Avnet\PCIe_Perf\PCIe_Perf\DriverMgr2.dll=$(AppPath)
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v19.bit=$(AppPath)
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v19.mcs=$(AppPath)
+C:\Program Files\Avnet\PCIe_Perf\DriverMgr2.dll=$(WinSysPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\Projects_2006\PCIe_Perf\3s1000\GUI\PCIe_Perf.exe=No
+C:\Projects_2006\PCIe_Perf\3s1000\DriverMgr\ReleaseMinDependency\DriverMgr2.dll=No
+C:\Projects_2006\PCIe_Perf\3s1000\Driver\S3_1000_Perf\sourceWDM\objfre_wxp_x86\i386\pcie_demo.sys=No
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v18a.mcs=No
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v18a.bit=No
+C:\Projects_2006\PCIe_Perf\3s1000\Driver\S3_1000_Perf\oemsetupXP.inf=No
+C:\Program Files\Avnet\PCIe_Perf\PCIe_Perf\DriverMgr2.dll=No
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v19.bit=No
+C:\Projects_2006\PCIe_Perf\3s1000\BDM\xilinx_pci_exp_1_lane_epipe_ep_v19.mcs=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Avnet Performance Demo for PCIe
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Avnet
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Avnet]
+Icon1=PCIe_Perf.exe
+Title1=Avnet Performance Demo for PCIe
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\Projects_2007\PCIe\PCIe_Perf\Deploy\V2.0.1
+ProjectFolder=C:\Projects_2006\PCIe_Perf\3s1000\GUI
+ServerSideCab=
+File1=C:\Projects_2007\PCIe\PCIe_Perf\Deploy\V2.0.1\setup.exe
+File2=C:\Projects_2007\PCIe\PCIe_Perf\Deploy\V2.0.1\Setup.Lst
+File3=C:\Projects_2007\PCIe\PCIe_Perf\Deploy\V2.0.1\PCIe_Perf.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

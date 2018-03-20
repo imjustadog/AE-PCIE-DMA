@@ -1,0 +1,328 @@
+################################################################################
+#
+# Use this file only with the device listed below.  Any other
+# combination is invalid.  Do not modify this file except in
+# regions designated for "User" constraints.
+#
+# Copyright (c) 2005 Xilinx, Inc.  All rights reserved.
+#
+################################################################################
+# Declare Part Type, Package, and Speed
+###############################################################################
+
+CONFIG PART = XC3S1000-FG676-4 ;
+
+###############################################################################
+# Pinout and Related I/O Constraints
+###############################################################################
+
+#
+# SYS reset (input) signal.  The sys_reset_n signal should be
+# obtained from the PCI Express interface if possible.  For
+# slot based form factors, a system reset signal is usually
+# present on the connector.  For cable based form factors, a
+# system reset signal may not be available.  In this case, the
+# system reset signal must be generated locally by some form of
+# supervisory circuit.  You may change the IOSTANDARD and LOC
+# to suit your requirements and VCCO voltage banking rules.
+#
+
+NET "sys_reset_n"         LOC = "AE4"  | IOSTANDARD = LVCMOS25 | IOBDELAY = NONE ;
+
+#
+# PIPE receive (input) signals.  These inputs must be properly
+# terminated SSTL2_I signals.  Termination is required at both
+# the driving device and the receiving device.  When routing
+# these signals on the board, they should be length matched to
+# minimize skew.  For FPGA devices that support DCI, you may
+# elect to change the IOSTANDARD from SSTL2_I to SSTL2_I_DCI.
+# Use of DCI requires proper setting of VRN and VRP reference
+# resistors, but eliminates the need for external termination
+# at the FPGA device.  Note that the proper termination at the
+# PHY device is still required, even when DCI is used.  Please
+# consult the core documentation and the FPGA device datasheet
+# for additional information.
+#
+
+NET "rxclk"               LOC = "AE13" | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "phystatus"           LOC = "AF12" | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxvalid"             LOC = "AD12" | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxstatus<2>"         LOC = "AC11" | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxstatus<1>"         LOC = "AD10" | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxstatus<0>"         LOC = "AC10" | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdatak<0>"          LOC = "AF8"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<0>"           LOC = "AE8"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<1>"           LOC = "AC7"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<2>"           LOC = "AF6"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<3>"           LOC = "AE6"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<4>"           LOC = "AD6"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<5>"           LOC = "AC6"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<6>"           LOC = "AE5"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxdata<7>"           LOC = "AD5"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+NET "rxelecidle"          LOC = "AF4"  | IOSTANDARD = SSTL2_I | IOBDELAY = NONE ;
+
+#
+# PIPE transmit (output) signals.  These outputs must be properly
+# terminated SSTL2_I signals.  Termination is required at both
+# the driving device and the receiving device.  When routing
+# these signals on the board, they should be length matched to
+# minimize skew.  For FPGA devices that support DCI, you may
+# elect to change the IOSTANDARD from SSTL2_I to SSTL2_I_DCI.
+# Use of DCI requires proper setting of VRN and VRP reference
+# resistors, but eliminates the need for external termination
+# at the FPGA device.  Note that the proper termination at the
+# PHY device is still required, even when DCI is used.  Please
+# consult the core documentation and the FPGA device datasheet
+# for additional information.
+#
+
+NET "resetn"              LOC = "AF24" | IOSTANDARD = SSTL2_I ;
+NET "rxpolarity"          LOC = "AE24" | IOSTANDARD = SSTL2_I ;
+NET "txelecidle"          LOC = "AF23" | IOSTANDARD = SSTL2_I ;
+NET "txcompliance"        LOC = "AE23" | IOSTANDARD = SSTL2_I ;
+NET "powerdown<1>"        LOC = "AD23" | IOSTANDARD = SSTL2_I ;
+NET "powerdown<0>"        LOC = "AF22" | IOSTANDARD = SSTL2_I ;
+NET "txdatak<0>"          LOC = "AE22" | IOSTANDARD = SSTL2_I ;
+NET "txdetectrx_loopback" LOC = "AF21" | IOSTANDARD = SSTL2_I ;
+NET "txclk"               LOC = "AE21" | IOSTANDARD = SSTL2_I ;
+NET "txdata<7>"           LOC = "AD21" | IOSTANDARD = SSTL2_I ;
+NET "txdata<6>"           LOC = "AF20" | IOSTANDARD = SSTL2_I ;
+NET "txdata<5>"           LOC = "AE20" | IOSTANDARD = SSTL2_I ;
+NET "txdata<4>"           LOC = "AF19" | IOSTANDARD = SSTL2_I ;
+NET "txdata<3>"           LOC = "AE19" | IOSTANDARD = SSTL2_I ;
+NET "txdata<2>"           LOC = "AF15" | IOSTANDARD = SSTL2_I ;
+NET "txdata<1>"           LOC = "AE15" | IOSTANDARD = SSTL2_I ;
+NET "txdata<0>"           LOC = "AD15" | IOSTANDARD = SSTL2_I ;
+
+###############################################################################
+# Timing Constraints
+###############################################################################
+
+#
+# Ignore timing on asynchronous signals.
+#
+
+NET "sys_reset_n" TIG ;
+
+#
+# Timing requirements and related constraints.
+#
+
+NET "rxclk" TNM_NET = "TNM_NET_RXCLK" ;
+TIMESPEC "TS_RXCLK" = PERIOD "TNM_NET_RXCLK" 250 MHz HIGH 50 % PRIORITY 0 ;
+
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/*" AREA_GROUP = "AG_PLM" ;
+AREA_GROUP "AG_PLM" RANGE = SLICE_X2Y0:SLICE_X77Y31 ;
+
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/special_bufg"  LOC = "BUFGMUX3" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/kh2_bufg"      LOC = "BUFGMUX2" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/mgt_bufg"      LOC = "BUFGMUX1" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/phy_bufg"      LOC = "BUFGMUX0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/dcm"           LOC = "DCM_X0Y0" ;
+
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/reg_pipe_ckel" LOC = "SLICE_X46Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata0"     LOC = "SLICE_X46Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata1"     LOC = "SLICE_X47Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata2"     LOC = "SLICE_X47Y0" ;
+
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/reg_pipe_ckem" LOC = "SLICE_X62Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata3"     LOC = "SLICE_X62Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata4"     LOC = "SLICE_X62Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata5"     LOC = "SLICE_X63Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata6"     LOC = "SLICE_X63Y0" ;
+
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/reg_pipe_cker" LOC = "SLICE_X70Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdata7"     LOC = "SLICE_X70Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxdatak"     LOC = "SLICE_X71Y0" ;
+INST "bmd_design/BU2/U0/pci_exp_1_lane_epipe_ep0/plm/kh2_mgt/nstxcompl"     LOC = "SLICE_X71Y0" ;
+
+
+#
+# Timing requirements; input and output register
+# packing into IOB.  The following constraints are
+# bogus constraints, used with the intent that they
+# fail should the IOB flops not be properly packed.
+# If you encounter timing failures, check that you
+# are using map with the correct option, "-pr b".
+# You should manually verify in the .mrp report
+# file that the rxclk input register is properly
+# packed into the IOB.  It is illegal to specify
+# an OFFSET constraint on a clock input with respect
+# to itself, so no constraint is present for rxclk.
+# The OFFSET constraint for txclk is larger than the
+# other outputs to account for the fact that it is
+# clocked by both edges of rxclk; the timing tools
+# report this as an extra half-cycle worth of delay.
+#
+
+NET "phystatus"           OFFSET = IN 1.8 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxvalid"             OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxstatus<2>"         OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxstatus<1>"         OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxstatus<0>"         OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdatak<0>"          OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<0>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<1>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<2>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<3>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<4>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<5>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<6>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxdata<7>"           OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+NET "rxelecidle"          OFFSET = IN 1.5 ns VALID 3.0 ns BEFORE "rxclk" ;
+
+NET "resetn"              OFFSET = OUT 6.5 ns AFTER "rxclk" ;
+NET "rxpolarity"          OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txelecidle"          OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txcompliance"        OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "powerdown<1>"        OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "powerdown<0>"        OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdatak<0>"          OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdetectrx_loopback" OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<7>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<6>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<5>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<4>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<3>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<2>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<1>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txdata<0>"           OFFSET = OUT 4.5 ns AFTER "rxclk" ;
+NET "txclk"               OFFSET = OUT 6.5 ns AFTER "rxclk" ;
+
+###############################################################################
+# Timing Budget Information, PX1011A-EL to XC3S1000
+###############################################################################
+
+#
+# Timing info; output data valid window, PX1011A-EL.
+# All output signals from PX1011A-EL are synchronous
+# to rxclk.  The rxclk is a source synchronous clock
+# that is center aligned with the data.  This creates
+# a data valid window of 3.0 ns, with the data valid
+# 1.5 ns before the rising edge of rxclk and 1.5 ns
+# after the rising edge.  This timing information is
+# from the device datasheet and is assumed to account
+# for all skew associated with the device.
+#
+
+#
+# Timing info; input data setup/hold window, XC3S1000.
+# All input signals to the XC3S1000 are synchronous
+# to rxclk.  The rxclk is a source synchronous clock
+# that is center aligned with the data.  This design
+# uses an implementation of active phase alignment from
+# Xilinx Application Note 268.  The required input data
+# setup/hold window at the device is based on parameters:
+#
+# * Tsamp, 800 ps
+#   This parameter indicates the total sampling error
+#   at the input registers across voltage, temperature,
+#   and process.  For a single data rate interface, this
+#   number includes the DCM jitter, the DCM phase shift
+#   resolution, and DCM phase offset.  This value is an
+#   estimate based on source synchronous characterization
+#   data.
+#
+# * package skew, +/- 150 ps
+#   This is the worst case package skew between pins
+#   used for rxclk and the inputs.  This value is a
+#   conservative estimate based on published package
+#   skew data for another device family.
+#
+# * clock skew, +/- 250 ps
+#   This is the worst case clock skew between pins
+#   used for rxclk and the inputs.  This value is
+#   measured for the clk2x signal using the delay
+#   function in FPGA Editor for this specific device
+#   and pinout.
+#
+# The input data valid window computed as the result:
+# Rx = [800 + 150 + 250] = 1200 ps
+#
+
+#
+# Timing budget, from PX1011A-EL to XC3S1000.  The
+# remaining slack is sufficient to cover skew in the
+# signal routing, inter-symbol interference, and other
+# analog considerations.  Xilinx is not responsible
+# for board-related failures and therefore strongly
+# recommends all users perform simulations.
+#
+
+###############################################################################
+# Timing Budget Information, XC3S1000 to PX1011A-EL
+###############################################################################
+
+#
+# Timing info; output data valid window, XC3S1000.
+# All output signals from XC3S1000 are synchronous
+# to txclk.  The txclk is a source synchronous clock
+# that is center aligned with the data.  The internal
+# clock signals are generated from a 250 MHz reference
+# (rxclk) that enters the DCM using the divide by two
+# option.  Three DCM outputs are used; clk2x is 250 MHz,
+# clk0 is 125 MHz, and clkdv is 62.5 MHz.  The clk0 is
+# used as the DCM feedback clock.  The clk2x signal is
+# used to forward txclk via a DDR output register.  The
+# txclk yields an ideal data valid window of 4.0 ns,
+# with the data valid 2.0 ns before the rising edge
+# and 2.0 ns after the rising edge.  This ideal window
+# must then be adjusted for sources of skew:
+#
+# * DCM output jitter, +/- 200 ps
+#   This output jitter figure is for the 2x output,
+#   obtained from the device datasheet.  Jitter is
+#   the only number in the timing budget defined
+#   with absolute magnitude; in this case, the jitter
+#   magnitude used in calculations is twice the value
+#   shown above.
+#
+# * duty cycle distortion, +/- 400 ps
+#   In this design, clk2x is used to forward txclk via
+#   a DDR output register using local clock inversion.
+#   The negative edge of clk2x causes the rising edge
+#   on txclk.  Therefore, duty cycle distortion is an
+#   important consideration.  This value is an estimate
+#   based on source synchronous characterization data.
+#
+# * package skew, +/- 150 ps
+#   This is the worst case package skew between pins
+#   used for txclk and the outputs.  This value is a
+#   conservative estimate based on published package
+#   skew data for another device family.
+#
+# * clock skew, +/- 150 ps
+#   This is the worst case clock skew between pins
+#   used for txclk and the outputs.  This value is
+#   measured for the clk2x signal using the delay
+#   function in FPGA Editor for this specific device
+#   and pinout.
+#
+# The output data valid window computed as the result:
+# Tx = 4000 - [400 + 400 + 150 + 150] = 2900 ps
+#
+#
+# Timing info; input data setup/hold window, PX1011A-EL.
+# All input signals to the PX1011A-EL are synchronous
+# to txclk.  The txclk is a source synchronous clock
+# that is center aligned with the data.  The required
+# input data setup/hold window at the device is 1.0 ns,
+# with the data setup 0.5 ns before the rising edge of
+# txclk and data hold 0.5 ns after the rising edge.
+# This timing information is from the device datasheet
+# and is assumed to account for all skew associated
+# with the device.
+#
+
+#
+# Timing budget, from XC3S1000 to PX1011A-EL.  The
+# remaining slack is sufficient to cover skew in the
+# signal routing, inter-symbol interference, and other
+# analog considerations.  Xilinx is not responsible
+# for board-related failures and therefore strongly
+# recommends all users perform simulations.
+#
+
+###############################################################################
+# End
+###############################################################################

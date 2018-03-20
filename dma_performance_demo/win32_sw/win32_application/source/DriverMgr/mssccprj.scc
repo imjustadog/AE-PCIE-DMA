@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[DriverMgr.dsp]
+SCC_Aux_Path = "C:\Projects\EDK3.2\Operation_XE\VSS\Operation_XE"
+SCC_Project_Name = "$/PCIe_Perf/DriverMgr", MQAAAAAA

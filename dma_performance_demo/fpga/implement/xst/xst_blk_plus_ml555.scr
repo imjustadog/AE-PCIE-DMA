@@ -1,0 +1,12 @@
+
+run
+-ifn ./xst/xilinx_pci_exp_blk_plus_inc.xst
+-ifmt Verilog
+-p xc5vlx50t-ff1136-1
+-bufg 0
+-top xilinx_pci_exp_ep
+-ofn xilinx_pci_exp_ep.ngc
+-opt_mode SPEED
+-opt_level 2
+-ofmt NGC
+-uc ./xst/bmd_design.xcf

@@ -1,0 +1,8 @@
+SCC = This is a Source Code Control file
+
+[PCIe_Perf.vbp]
+SCC_Aux_Path =C:\Projects\EDK3.2\Operation_XE\VSS\Operation_XE,
+SCC_Project_Name ="$/PCIe_Perf", JQAAAAAA
+[Avnet.vbp]
+SCC_Project_Name=this project is not under source code control
+SCC_Aux_Path=<This is an empty string for the mssccprj.scc file>

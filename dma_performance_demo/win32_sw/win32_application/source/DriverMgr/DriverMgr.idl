@@ -1,0 +1,74 @@
+// DriverMgr.idl : IDL source for DriverMgr.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DriverMgr.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+//		uuid(AFF50540-9C1F-4F79-8AD2-5F3FAECD6F6E),
+		uuid(3E75B3E2-14E8-46f7-9E64-2AE01A61A651),
+		dual,
+		helpstring("Is3_1000 Interface"),
+		pointer_default(unique)
+	]
+	interface Is3_1000 : IDispatch
+	{
+		[id(1), helpstring("method OpenDevice")] HRESULT OpenDevice([out, retval] long *status);
+		[id(2), helpstring("method CloseDevice")] HRESULT CloseDevice();
+		[id(3), helpstring("method SetLEDState")] HRESULT SetLEDState([in] long index, [in] long on);
+		[id(4), helpstring("method GetLEDState")] HRESULT GetLEDState([in] long index, [out, retval] long *state);
+		[id(5), helpstring("method GetDIPState")] HRESULT GetDIPState([out, retval] long *state);
+		[id(6), helpstring("method GetPBState")] HRESULT GetPBState([out, retval] long *state);
+		[id(7), helpstring("method Reset")] HRESULT Reset([out, retval] long *status);
+		[id(8), helpstring("method SetDMAWrite")] HRESULT SetDMAWrite([in] long size, [in] long count, [in] long pattern, [out, retval] long *status);
+		[id(9), helpstring("method SetDMARead")] HRESULT SetDMARead([in] long size, [in] long count, [in] long pattern, [out, retval] long *status);
+		[id(10), helpstring("method StartDMA")] HRESULT StartDMA([out, retval] long *status);
+		[id(11), helpstring("method GetDMAStatus")] HRESULT GetDMAStatus([out, retval] long *status);
+		[id(12), helpstring("method GetDMAWritePerf")] HRESULT GetDMAWritePerf([out, retval] long *cycles);
+		[id(13), helpstring("method GetDMAReadPerf")] HRESULT GetDMAReadPerf([out, retval] long *cycles);
+		[id(14), helpstring("method VerifyDMAWrite")] HRESULT VerifyDMAWrite([out, retval] long *status);
+		[id(15), helpstring("method GetRegister32")] HRESULT GetRegister32([in] long index, [out, retval] long *regValue);
+		[id(16), helpstring("method GetTLPMaxSize")] HRESULT GetTLPMaxSize([out, retval] long *size);
+		[id(17), helpstring("method GetFPGAFamily")] HRESULT GetFPGAFamily([out, retval] long *index);
+		[id(18), helpstring("method GetCycleTime")] HRESULT GetCycleTime([out, retval] long *cycleTime);
+		[id(19), helpstring("method SetInterruptState")] HRESULT SetInterruptState([in] long state);
+
+	};
+
+[
+//	uuid(91A359D4-357C-4A99-BBD1-C2B2B44D3F08),
+	uuid(FE9E3996-959F-4054-B3CE-A0EDA2AA0C31),
+	version(2.0),
+	helpstring("DriverMgr 2.0 Type Library")
+]
+library DRIVERMGRLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+//		uuid(F3B7EAA7-9987-471D-BD37-1CA42583D0FF),
+		uuid(59C3DB58-C9B2-4a94-A49E-6A00DE5EF600),
+		helpstring("_Is3_1000Events Interface")
+	]
+	dispinterface _Is3_1000Events
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method DisplayMessage")] HRESULT DisplayMessage([in, string] BSTR msg, [in, string] BSTR src);
+	};
+
+	[
+//		uuid(BAFD5D38-0E00-49CF-9CF5-C3927282C67F),
+		uuid(5B145E4D-5D9E-45f6-B580-ADBD48380118),
+		helpstring("s3_1000 Class")
+	]
+	coclass s3_1000
+	{
+		[default] interface Is3_1000;
+		[default, source] dispinterface _Is3_1000Events;
+	};
+};
