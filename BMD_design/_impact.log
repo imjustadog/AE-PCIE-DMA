@@ -1,0 +1,142 @@
+iMPACT Version: 13.4
+
+iMPACT log file Started on Thu Apr 05 10:59:09 2018
+
+Welcome to iMPACT
+iMPACT Version: 13.4
+// *** BATCH CMD : loadProjectFile -file"D:\GitHub\AE-PCIE-DMA\download\prom.ipf"
+INFO:iMPACT:2641 - Error reading project file   D:\GitHub\AE-PCIE-DMA\download\prom.ipf.
+Project: 'D:\GitHub\AE-PCIE-DMA\download\prom.ipf' loaded.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+Welcome to iMPACT
+iMPACT Version: 13.4
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+Cable connection failed.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+Cable autodetection failed.
+WARNING:iMPACT:923 - Can not find cable, check cable setup !// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "prom" -path"D:\GitHub\AE-PCIE-DMA\download\"
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "TRUE"
+// *** BATCH CMD : addPromDevice -p 1 -size 8192 -name 8M
+'1': Added Device 8M successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : prom
+      File Location : D:\GitHub\AE-PCIE-DMA\download\/
+      Auto Select : false
+      Number of Revisions : 1
+      Number of PROMs : 1
+      PROM Name : 8M   PROM Size : 8388608 bits
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setAttribute -design -attr name -value "0000"
+// *** BATCH CMD : addDevice -p 1 -file"D:/GitHub/AE-PCIE-DMA/BMD_design/xilinx_pcie_1_1_ep_s6.bit"
+'1': Loading file 'D:/GitHub/AE-PCIE-DMA/BMD_design/xilinx_pcie_1_1_ep_s6.bit'...
+INFO:iMPACT - Elapsed time =      0 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xc6slx45t successfully.
+----------------------------------------------------------------------
+Add one device.16a79dINFO:iMPACT - Current time: 2018/4/5 11:02:11
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffspi
+Total configuration bit size = 11875232  bits.
+Total configuration byte size = 1484404 bytes.
+// *** BATCH CMD : generate
+0x16a674 (1484404) bytes loaded up from 0x0
+Using user-specified prom size of 8192K
+Writing file "D:\GitHub\AE-PCIE-DMA\download\prom.mcs".
+Writing file "D:\GitHub\AE-PCIE-DMA\download\prom.prm".
+Writing file "D:\GitHub\AE-PCIE-DMA\download\prom.cfi".
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"D:/GitHub/AE-PCIE-DMA/download/prom.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -pff
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   D:\GitHub\AE-PCIE-DMA\download/webtalk.log for details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1

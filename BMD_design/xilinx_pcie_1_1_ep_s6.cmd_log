@@ -10,3 +10,4 @@ map -intstyle ise -p xc6slx45t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r
 par -w -intstyle ise -ol high -mt off xilinx_pcie_1_1_ep_s6_map.ncd xilinx_pcie_1_1_ep_s6.ncd xilinx_pcie_1_1_ep_s6.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml xilinx_pcie_1_1_ep_s6.twx xilinx_pcie_1_1_ep_s6.ncd -o xilinx_pcie_1_1_ep_s6.twr xilinx_pcie_1_1_ep_s6.pcf 
 bitgen -intstyle ise -f xilinx_pcie_1_1_ep_s6.ut xilinx_pcie_1_1_ep_s6.ncd 
+bitgen -intstyle ise -f xilinx_pcie_1_1_ep_s6.ut xilinx_pcie_1_1_ep_s6.ncd 

@@ -22,6 +22,8 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="BMD_design.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD" xil_pn:name="_impact.cmd"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="_impact.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -75,6 +77,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1521552724" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1521552724">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1521552724" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8216478657478692077" xil_pn:start_ts="1521552724">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -161,7 +164,7 @@
       <outfile xil_pn:name="xilinx_pcie_1_1_ep_s6_pad.txt"/>
       <outfile xil_pn:name="xilinx_pcie_1_1_ep_s6_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1521553166" xil_pn:in_ck="5209009174440833051" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="396117104113915555" xil_pn:start_ts="1521553146">
+    <transform xil_pn:end_ts="1522897050" xil_pn:in_ck="5209009174440833051" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1522897018">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -172,6 +175,12 @@
       <outfile xil_pn:name="xilinx_pcie_1_1_ep_s6.bit"/>
       <outfile xil_pn:name="xilinx_pcie_1_1_ep_s6.drc"/>
       <outfile xil_pn:name="xilinx_pcie_1_1_ep_s6.ut"/>
+    </transform>
+    <transform xil_pn:end_ts="1522897557" xil_pn:in_ck="5209009174440820197" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1522897557">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_impact.cmd"/>
+      <outfile xil_pn:name="_impact.log"/>
     </transform>
     <transform xil_pn:end_ts="1521553146" xil_pn:in_ck="-776082318227761244" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1521553138">
       <status xil_pn:value="SuccessfullyRun"/>
