@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.87xd on Tue Mar 20 21:37:52 2018
+// Written by: Map O.87xd on Sun Apr 08 19:22:02 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -98,6 +98,14 @@ PIN s6_pcie_v1_4_i/pcie_bram_top/pcie_brams_rx/brams[0].ram/ramb16_pins<29> =
         PINNAME CLKB;
 TIMEGRP s6_pcie_v1_4_i_clk_62_5 = BEL "s6_pcie_v1_4_i/phy_bufg" PIN
         "s6_pcie_v1_4_i/PCIE_A1_pins<599>" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_7" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_6" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_5" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_4" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_3" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_2" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_1" BEL
+        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_0" BEL
         "app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_7" BEL
         "app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_6" BEL
         "app/BMD/BMD_EP/EP_TX/tmwr_wrr_cnt_5" BEL
@@ -794,10 +802,10 @@ TIMEGRP s6_pcie_v1_4_i_clk_62_5 = BEL "s6_pcie_v1_4_i/phy_bufg" PIN
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_width_change_err" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_upstream_preemph_src" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_directed_link_auton" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_directed_link_speed_binary_1" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_directed_link_speed_binary_0" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_directed_link_width_1" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_directed_link_width_0" BEL
+        "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_directed_link_speed_binary_1" BEL
+        "app/BMD/BMD_EP/EP_MEM/EP_MEM/pl_directed_link_speed_binary_0" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/trn_tstr_n_o" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/trn_rnp_ok_n_o" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/rd_metering_o" BEL
@@ -820,6 +828,10 @@ TIMEGRP s6_pcie_v1_4_i_clk_62_5 = BEL "s6_pcie_v1_4_i/phy_bufg" PIN
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_phant_func_dis1_o" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_nosnoop_o" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_relaxed_order_o" BEL
+        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_64b_en_o" BEL
+        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_tlp_tc_o_2" BEL
+        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_tlp_tc_o_1" BEL
+        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_tlp_tc_o_0" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_up_addr_o_7" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_up_addr_o_6" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_up_addr_o_5" BEL
@@ -828,11 +840,7 @@ TIMEGRP s6_pcie_v1_4_i_clk_62_5 = BEL "s6_pcie_v1_4_i/phy_bufg" PIN
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_up_addr_o_2" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_up_addr_o_1" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_up_addr_o_0" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_tlp_tc_o_2" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_tlp_tc_o_1" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_tlp_tc_o_0" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_int_dis_o" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_64b_en_o" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_start_o" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_start_o" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/cpld_data_o_31" BEL
@@ -867,38 +875,6 @@ TIMEGRP s6_pcie_v1_4_i_clk_62_5 = BEL "s6_pcie_v1_4_i/phy_bufg" PIN
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/cpld_data_o_2" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/cpld_data_o_1" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/cpld_data_o_0" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_31" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_30" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_29" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_28" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_27" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_26" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_25" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_24" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_23" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_22" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_21" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_20" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_19" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_18" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_17" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_16" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_15" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_14" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_13" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_12" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_11" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_10" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_9" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_8" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_7" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_6" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_5" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_4" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_3" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_2" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_1" BEL
-        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_0" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_31" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_30" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_count_o_29" BEL
@@ -1071,20 +1047,14 @@ TIMEGRP s6_pcie_v1_4_i_clk_62_5 = BEL "s6_pcie_v1_4_i/phy_bufg" PIN
         BEL "app/BMD/BMD_EP/EP_MEM/EP_MEM/mrd_done_o" BEL
         "app/BMD/BMD_TO/trn_pending" BEL "app/BMD/BMD_EP/EP_TX/mrd_done" BEL
         "app/BMD/BMD_EP/EP_RX/cpld_data_err_o" BEL
+        "app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_data_o_2" BEL
         "app/BMD/BMD_EP/EP_MEM/EP_MEM/init_rst_o" BEL
         "app/BMD/BMD_CF/cfg_bme_state" BEL "app/BMD/BMD_EP/EP_TX/mwr_done_o"
-        BEL "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd1_1" BEL
-        "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd3_1" BEL
-        "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2_1" BEL
+        BEL "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd3_1" BEL
+        "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd3_2" BEL
         "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd4_1" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_7" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_6" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_5" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_4" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_3" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_2" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_1" BEL
-        "app/BMD/BMD_EP/EP_TX/tmrd_wrr_cnt_0" PIN
+        "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd1_1" BEL
+        "app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2_1" PIN
         "s6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[3].ram/ramb16_pins<28>"
         PIN
         "s6_pcie_v1_4_i/pcie_bram_top/pcie_brams_tx/brams[3].ram/ramb16_pins<29>"
@@ -1127,10 +1097,10 @@ NET "sys_clk_c" PERIOD = 10 ns HIGH 50%;
 TS_GT_REFCLK_OUT = PERIOD TIMEGRP "GT_REFCLK_OUT" 10 ns HIGH 50%;
 TS_s6_pcie_v1_4_i_gt_refclk_buf = PERIOD TIMEGRP
         "s6_pcie_v1_4_i_gt_refclk_buf" TS_GT_REFCLK_OUT HIGH 50%;
-TS_s6_pcie_v1_4_i_clk_125 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_125"
-        TS_s6_pcie_v1_4_i_gt_refclk_buf / 1.25 HIGH 50%;
 TS_s6_pcie_v1_4_i_clk_250 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_250"
         TS_s6_pcie_v1_4_i_gt_refclk_buf / 2.5 HIGH 50%;
+TS_s6_pcie_v1_4_i_clk_125 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_125"
+        TS_s6_pcie_v1_4_i_gt_refclk_buf / 1.25 HIGH 50%;
 TS_s6_pcie_v1_4_i_clk_62_5 = PERIOD TIMEGRP "s6_pcie_v1_4_i_clk_62_5"
         TS_s6_pcie_v1_4_i_gt_refclk_buf / 0.625 HIGH 50%;
 PIN sys_reset_n_pins<0> = BEL "sys_reset_n" PINNAME PAD;

@@ -1,8 +1,8 @@
 Storage Target: SPI Flash Single FPGA
 64M
 FF
-prom
-D:\GitHub\AE-PCIE-DMA\download/
+axi
+D:/GitHub/AE-PCIE-DMA-AXI/download
 
 MCS
 No

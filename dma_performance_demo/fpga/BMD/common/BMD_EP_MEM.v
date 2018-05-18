@@ -498,7 +498,7 @@ assign cfg_interrupt_legacyclr = LEGACYCLR;
             7'b000101: begin
 
               if (wr_en_i)
-                mwr_data_o  <= wr_d_i;
+                mwr_data_o  <= 32'h62222434;
               
               rd_d_o <= mwr_data_o;
 

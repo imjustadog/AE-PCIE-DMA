@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-04-05T11:04:39</DateModified>
+  <DateModified>2018-04-11T09:53:00</DateModified>
   <ModuleName>xilinx_pcie_1_1_ep_s6</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>D:/GitHub/AE-PCIE-DMA/BMD_design/iseconfig/xilinx_pcie_1_1_ep_s6.xreport</SavedFilePath>

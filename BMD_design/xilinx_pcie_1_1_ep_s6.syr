@@ -3,13 +3,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: xilinx_pcie_1_1_ep_s6.prj
@@ -989,8 +989,11 @@ Macro Statistics
 
 INFO:Xst:2261 - The FF/Latch <mrd_len_byte_0> in Unit <EP_TX> is equivalent to the following 3 FFs/Latches, which will be removed : <mrd_len_byte_1> <mwr_len_byte_0> <mwr_len_byte_1> 
 INFO:Xst:2261 - The FF/Latch <mwr_len_o_16> in Unit <EP_MEM> is equivalent to the following 15 FFs/Latches, which will be removed : <mwr_len_o_17> <mwr_len_o_18> <mwr_len_o_19> <mwr_len_o_20> <mwr_len_o_21> <mwr_len_o_22> <mwr_len_o_23> <mwr_len_o_24> <mwr_len_o_25> <mwr_len_o_26> <mwr_len_o_27> <mwr_len_o_28> <mwr_len_o_29> <mwr_len_o_30> <mwr_len_o_31> 
+INFO:Xst:2261 - The FF/Latch <mwr_data_o_2> in Unit <EP_MEM> is equivalent to the following 9 FFs/Latches, which will be removed : <mwr_data_o_4> <mwr_data_o_5> <mwr_data_o_10> <mwr_data_o_13> <mwr_data_o_17> <mwr_data_o_21> <mwr_data_o_25> <mwr_data_o_29> <mwr_data_o_30> 
+INFO:Xst:2261 - The FF/Latch <mwr_data_o_0> in Unit <EP_MEM> is equivalent to the following 21 FFs/Latches, which will be removed : <mwr_data_o_1> <mwr_data_o_3> <mwr_data_o_6> <mwr_data_o_7> <mwr_data_o_8> <mwr_data_o_9> <mwr_data_o_11> <mwr_data_o_12> <mwr_data_o_14> <mwr_data_o_15> <mwr_data_o_16> <mwr_data_o_18> <mwr_data_o_19> <mwr_data_o_20> <mwr_data_o_22> <mwr_data_o_23> <mwr_data_o_24> <mwr_data_o_26> <mwr_data_o_27> <mwr_data_o_28> <mwr_data_o_31> 
 INFO:Xst:2261 - The FF/Latch <mrd_len_o_16> in Unit <EP_MEM> is equivalent to the following 15 FFs/Latches, which will be removed : <mrd_len_o_17> <mrd_len_o_18> <mrd_len_o_19> <mrd_len_o_20> <mrd_len_o_21> <mrd_len_o_22> <mrd_len_o_23> <mrd_len_o_24> <mrd_len_o_25> <mrd_len_o_26> <mrd_len_o_27> <mrd_len_o_28> <mrd_len_o_29> <mrd_len_o_30> <mrd_len_o_31> 
 WARNING:Xst:1710 - FF/Latch <mrd_len_byte_0> (without init value) has a constant value of 0 in block <EP_TX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mwr_data_o_0> (without init value) has a constant value of 0 in block <EP_MEM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <pl_sel_link_rate_save> (without init value) has a constant value of 0 in block <BMD_GEN2_I>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <pl_sel_link_width_save_0> (without init value) has a constant value of 0 in block <BMD_GEN2_I>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <pl_sel_link_width_save_1> (without init value) has a constant value of 0 in block <BMD_GEN2_I>. This FF/Latch will be trimmed during the optimization process.
@@ -1006,6 +1009,7 @@ WARNING:Xst:2677 - Node <mrd_len_o_16> of sequential type is unconnected in bloc
 WARNING:Xst:2677 - Node <mwr_len_o_16> of sequential type is unconnected in block <EP_MEM>.
 WARNING:Xst:2404 -  FFs/Latches <mrd_len_o<31:16>> (without init value) have a constant value of 0 in block <BMD_EP_MEM>.
 WARNING:Xst:2404 -  FFs/Latches <mwr_len_o<31:16>> (without init value) have a constant value of 0 in block <BMD_EP_MEM>.
+WARNING:Xst:2404 -  FFs/Latches <mwr_data_o<31:31>> (without init value) have a constant value of 0 in block <BMD_EP_MEM>.
 
 Synthesizing (advanced) Unit <BMD_EP_MEM>.
 The following registers are absorbed into counter <mwr_perf>: 1 register on signal <mwr_perf>.
@@ -1039,8 +1043,8 @@ Macro Statistics
  32-bit up counter                                     : 2
  4-bit up counter                                      : 1
  8-bit up counter                                      : 4
-# Registers                                            : 972
- Flip-Flops                                            : 972
+# Registers                                            : 971
+ Flip-Flops                                            : 971
 # Comparators                                          : 16
  1-bit comparator equal                                : 2
  11-bit comparator greater                             : 4
@@ -1072,6 +1076,28 @@ WARNING:Xst:1710 - FF/Latch <mwr_len_byte_0> (without init value) has a constant
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_len_byte_1> (without init value) has a constant value of 0 in block <BMD_TX_ENGINE>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mrd_len_byte_0> (without init value) has a constant value of 0 in block <BMD_TX_ENGINE>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mrd_len_byte_1> (without init value) has a constant value of 0 in block <BMD_TX_ENGINE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mwr_data_o_28> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_27> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_26> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_24> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_23> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_22> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_20> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_19> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_18> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_16> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_15> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_14> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_12> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_11> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_9> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_8> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_7> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_6> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_3> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_1> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mwr_data_o_0> (without init value) has a constant value of 0 in block <BMD_EP_MEM>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <mwr_data_o_2> in Unit <BMD_EP_MEM> is equivalent to the following 9 FFs/Latches, which will be removed : <mwr_data_o_4> <mwr_data_o_5> <mwr_data_o_10> <mwr_data_o_13> <mwr_data_o_17> <mwr_data_o_21> <mwr_data_o_25> <mwr_data_o_29> <mwr_data_o_30> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <app/BMD/BMD_EP/EP_TX/FSM_3> on signal <bmd_32_tx_state[1:4]> with sequential encoding.
 ---------------------------
@@ -1290,7 +1316,7 @@ Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block xilinx_pcie_1_1_ep_s6, actual ratio is 3.
 FlipFlop app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd1 has been replicated 1 time(s)
 FlipFlop app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd3 has been replicated 2 time(s)
 FlipFlop app/BMD/BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd4 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -1299,8 +1325,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1009
- Flip-Flops                                            : 1009
+# Registers                                            : 979
+ Flip-Flops                                            : 979
 
 =========================================================================
 
@@ -1323,28 +1349,28 @@ Top Level Output File Name         : xilinx_pcie_1_1_ep_s6.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1846
+# BELS                             : 1837
 #      GND                         : 2
 #      INV                         : 24
 #      LUT1                        : 136
-#      LUT2                        : 208
-#      LUT3                        : 186
-#      LUT4                        : 87
-#      LUT5                        : 189
-#      LUT6                        : 429
+#      LUT2                        : 206
+#      LUT3                        : 195
+#      LUT4                        : 82
+#      LUT5                        : 193
+#      LUT6                        : 412
 #      MUXCY                       : 286
-#      MUXF7                       : 29
+#      MUXF7                       : 31
 #      VCC                         : 2
 #      XORCY                       : 268
-# FlipFlops/Latches                : 1009
-#      FD                          : 9
-#      FDC                         : 121
+# FlipFlops/Latches                : 979
+#      FD                          : 1
+#      FDC                         : 122
 #      FDCE                        : 243
 #      FDE                         : 16
 #      FDP                         : 3
 #      FDPE                        : 3
-#      FDR                         : 144
-#      FDRE                        : 467
+#      FDR                         : 145
+#      FDRE                        : 443
 #      FDS                         : 2
 #      FDSE                        : 1
 # RAMS                             : 8
@@ -1371,15 +1397,15 @@ Selected Device : 6slx45tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1009  out of  54576     1%  
- Number of Slice LUTs:                 1259  out of  27288     4%  
-    Number used as Logic:              1259  out of  27288     4%  
+ Number of Slice Registers:             979  out of  54576     1%  
+ Number of Slice LUTs:                 1248  out of  27288     4%  
+    Number used as Logic:              1248  out of  27288     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1773
-   Number with an unused Flip Flop:     764  out of   1773    43%  
-   Number with an unused LUT:           514  out of   1773    28%  
-   Number of fully used LUT-FF pairs:   495  out of   1773    27%  
+ Number of LUT Flip Flop pairs used:   1731
+   Number with an unused Flip Flop:     752  out of   1731    43%  
+   Number with an unused LUT:           483  out of   1731    27%  
+   Number of fully used LUT-FF pairs:   496  out of   1731    28%  
    Number of unique control sets:        39
 
 IO Utilization: 
@@ -1414,7 +1440,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-s6_pcie_v1_4_i/pll_base_i/CLKOUT2  | BUFG                   | 1018  |
+s6_pcie_v1_4_i/pll_base_i/CLKOUT2  | BUFG                   | 988   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1425,8 +1451,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.416ns (Maximum Frequency: 155.865MHz)
-   Minimum input arrival time before clock: 6.135ns
+   Minimum period: 6.442ns (Maximum Frequency: 155.228MHz)
+   Minimum input arrival time before clock: 6.186ns
    Maximum output required time after clock: 4.401ns
    Maximum combinational path delay: 4.443ns
 
@@ -1436,10 +1462,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 's6_pcie_v1_4_i/pll_base_i/CLKOUT2'
-  Clock period: 6.416ns (frequency: 155.865MHz)
-  Total number of paths / destination ports: 22821 / 1700
+  Clock period: 6.442ns (frequency: 155.228MHz)
+  Total number of paths / destination ports: 22479 / 1654
 -------------------------------------------------------------------------
-Delay:               6.416ns (Levels of Logic = 6)
+Delay:               6.442ns (Levels of Logic = 6)
   Source:            app/BMD/BMD_EP/EP_MEM/EP_MEM/mwr_start_o (FF)
   Destination:       app/BMD/BMD_EP/EP_TX/trn_td_9 (FF)
   Source Clock:      s6_pcie_v1_4_i/pll_base_i/CLKOUT2 rising
@@ -1450,42 +1476,41 @@ Delay:               6.416ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q             16   0.447   1.109  BMD_EP/EP_MEM/EP_MEM/mwr_start_o (BMD_EP/EP_MEM/EP_MEM/mwr_start_o)
-     LUT4:I2->O           13   0.203   0.933  BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In21 (BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In2)
-     LUT5:I4->O           10   0.205   0.857  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>121 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>12)
-     LUT5:I4->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>3_SW0 (N75)
+     LUT4:I2->O           19   0.203   1.072  BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In21 (BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In2)
+     LUT5:I4->O            6   0.205   0.745  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>121 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>12)
+     LUT5:I4->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>3_SW0 (N83)
      LUT6:I5->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>3 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>3)
      LUT6:I5->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>4 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>4)
      LUT6:I5->O            1   0.205   0.000  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>10 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>)
      FDC:D                     0.102          BMD_EP/EP_TX/trn_td_9
     ----------------------------------------
-    Total                      6.416ns (1.777ns logic, 4.639ns route)
-                                       (27.7% logic, 72.3% route)
+    Total                      6.442ns (1.777ns logic, 4.665ns route)
+                                       (27.6% logic, 72.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 's6_pcie_v1_4_i/pll_base_i/CLKOUT2'
-  Total number of paths / destination ports: 5173 / 1981
+  Total number of paths / destination ports: 5103 / 1960
 -------------------------------------------------------------------------
-Offset:              6.135ns (Levels of Logic = 7)
-  Source:            s6_pcie_v1_4_i/PCIE_A1:CFGCOMMANDBUSMASTERENABLE (PAD)
-  Destination:       app/BMD/BMD_EP/EP_TX/trn_td_9 (FF)
+Offset:              6.186ns (Levels of Logic = 6)
+  Source:            s6_pcie_v1_4_i/PCIE_A1:TRNTDSTRDYN (PAD)
+  Destination:       app/BMD/BMD_EP/EP_TX/trn_td_7 (FF)
   Destination Clock: s6_pcie_v1_4_i/pll_base_i/CLKOUT2 rising
 
-  Data Path: s6_pcie_v1_4_i/PCIE_A1:CFGCOMMANDBUSMASTERENABLE to app/BMD/BMD_EP/EP_TX/trn_td_9
+  Data Path: s6_pcie_v1_4_i/PCIE_A1:TRNTDSTRDYN to app/BMD/BMD_EP/EP_TX/trn_td_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-    PCIE_A1:CFGCOMMANDBUSMASTERENABLE   17   0.000   0.000  s6_pcie_v1_4_i/PCIE_A1 (cfg_command<2>)
-     begin scope: 'app/BMD:cfg_bus_mstr_enable'
-     LUT4:I0->O           13   0.203   0.933  BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In21 (BMD_EP/EP_TX/bmd_32_tx_state_FSM_FFd2-In2)
-     LUT5:I4->O           10   0.205   0.857  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>121 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<0>12)
-     LUT5:I4->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>3_SW0 (N75)
-     LUT6:I5->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>3 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>3)
-     LUT6:I5->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>4 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>4)
-     LUT6:I5->O            1   0.205   0.000  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>10 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<9>)
-     FDC:D                     0.102          BMD_EP/EP_TX/trn_td_9
+    PCIE_A1:TRNTDSTRDYN  110   0.000   0.000  s6_pcie_v1_4_i/PCIE_A1 (trn_tdst_rdy_n)
+     begin scope: 'app/BMD:trn_tdst_rdy_n'
+     LUT3:I0->O           15   0.205   0.982  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<1>11 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<1>1)
+     LUT5:I4->O            4   0.205   0.684  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<7>1 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<4>3)
+     LUT6:I5->O            1   0.205   0.580  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<7>2 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<7>2)
+     LUT5:I4->O            1   0.205   0.684  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<7>3 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<7>3)
+     LUT6:I4->O            1   0.203   0.000  BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<7>6 (BMD_EP/EP_TX/bmd_32_tx_state[12]_trn_td[31]_select_144_OUT<7>)
+     FDC:D                     0.102          BMD_EP/EP_TX/trn_td_7
     ----------------------------------------
-    Total                      6.135ns (2.605ns logic, 3.530ns route)
-                                       (42.5% logic, 57.5% route)
+    Total                      6.186ns (3.257ns logic, 2.929ns route)
+                                       (52.6% logic, 47.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 's6_pcie_v1_4_i/pll_base_i/CLKOUT2'
@@ -1538,20 +1563,20 @@ Clock to Setup on destination clock s6_pcie_v1_4_i/pll_base_i/CLKOUT2
                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------+---------+---------+---------+---------+
-s6_pcie_v1_4_i/pll_base_i/CLKOUT2|    6.416|         |         |         |
+s6_pcie_v1_4_i/pll_base_i/CLKOUT2|    6.442|         |         |         |
 ---------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 24.00 secs
-Total CPU time to Xst completion: 23.33 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.81 secs
  
 --> 
 
-Total memory usage is 273116 kilobytes
+Total memory usage is 271872 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  245 (   0 filtered)
-Number of infos    :   43 (   0 filtered)
+Number of warnings :  268 (   0 filtered)
+Number of infos    :   46 (   0 filtered)
 

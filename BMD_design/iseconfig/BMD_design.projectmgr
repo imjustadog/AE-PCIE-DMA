@@ -9,15 +9,16 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/BMD D:|GitHub|AE-PCIE-DMA|dma_performance_demo|fpga|BMD|common|BMD.v</ClosedNode>
          <ClosedNode>/s6_pcie_v1_4 D:|GitHub|AE-PCIE-DMA|GVI_PCIe_x1_Gen1|s6_pcie_v1_4|source|s6_pcie_v1_4.v</ClosedNode>
-         <ClosedNode>/xilinx_pcie_1_1_ep_s6 D:|GitHub|AE-PCIE-DMA|GVI_PCIe_x1_Gen1|s6_pcie_v1_4|example_design|xilinx_pcie_1_1_ep_s6.v/app - pcie_app_s6</ClosedNode>
+         <ClosedNode>/xilinx_pcie_1_1_ep_s6 D:|GitHub|AE-PCIE-DMA|GVI_PCIe_x1_Gen1|s6_pcie_v1_4|example_design|xilinx_pcie_1_1_ep_s6.v/app - pcie_app_s6/BMD - BMD/BMD_EP - BMD_EP/EP_MEM - BMD_EP_MEM_ACCESS</ClosedNode>
+         <ClosedNode>/xilinx_pcie_1_1_ep_s6 D:|GitHub|AE-PCIE-DMA|GVI_PCIe_x1_Gen1|s6_pcie_v1_4|example_design|xilinx_pcie_1_1_ep_s6.v/app - pcie_app_s6/BMD - BMD/BMD_EP - BMD_EP/EP_TX - BMD_TX_ENGINE</ClosedNode>
          <ClosedNode>/xilinx_pcie_1_1_ep_s6 D:|GitHub|AE-PCIE-DMA|GVI_PCIe_x1_Gen1|s6_pcie_v1_4|example_design|xilinx_pcie_1_1_ep_s6.v/s6_pcie_v1_4_i - s6_pcie_v1_4</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>xilinx_pcie_1_1_ep_s6 (D:/GitHub/AE-PCIE-DMA/GVI_PCIe_x1_Gen1/s6_pcie_v1_4/example_design/xilinx_pcie_1_1_ep_s6.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016d0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>xilinx_pcie_1_1_ep_s6 (D:/GitHub/AE-PCIE-DMA/GVI_PCIe_x1_Gen1/s6_pcie_v1_4/example_design/xilinx_pcie_1_1_ep_s6.v)</CurrentItem>
    </ItemView>
@@ -67,26 +68,26 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Manage Configuration Project (iMPACT)</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Manage Configuration Project (iMPACT)</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>BMD_PCIE_20.v (D:/GitHub/AE-PCIE-DMA/dma_performance_demo/fpga/BMD/common/BMD_PCIE_20.v)</SelectedItem>
+         <SelectedItem>xilinx_pcie_1_lane_ep_xc6slx45t-csg324-3.ucf (D:/GitHub/AE-PCIE-DMA/GVI_PCIe_x1_Gen1/s6_pcie_v1_4/example_design/xilinx_pcie_1_lane_ep_xc6slx45t-csg324-3.ucf)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d2000000020000000000000000000000000000000064ffffffff0000008100000000000000020000015500000001000000000000007d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>BMD_PCIE_20.v (D:/GitHub/AE-PCIE-DMA/dma_performance_demo/fpga/BMD/common/BMD_PCIE_20.v)</CurrentItem>
+      <CurrentItem>xilinx_pcie_1_lane_ep_xc6slx45t-csg324-3.ucf (D:/GitHub/AE-PCIE-DMA/GVI_PCIe_x1_Gen1/s6_pcie_v1_4/example_design/xilinx_pcie_1_lane_ep_xc6slx45t-csg324-3.ucf)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -102,7 +103,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000143000000010000000100000000000000000000000064ffffffff000000810000000000000001000001430000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001a0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001a00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
